@@ -25,7 +25,7 @@ const whyUsImage = PlaceHolderImages.find(p => p.id === 'why-us-image-1');
 
 export function WhyUsSection() {
   return (
-    <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
+    <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-background">
       <div className="container px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="relative h-[400px] md:h-[550px] w-full rounded-lg overflow-hidden shadow-2xl">
@@ -51,11 +51,11 @@ export function WhyUsSection() {
             <ul className="grid gap-4">
               {reasons.map((reason) => (
                 <li key={reason.title} className="flex items-start gap-4">
-                  <div className="text-gold rounded-full p-0 mt-1">
-                    <Check className="h-5 w-5" />
+                  <div className="p-0 mt-1">
+                    <Check className="h-5 w-5 text-gold" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-primary">{reason.title}</h3>
+                    <h3 className="font-semibold text-black font-light">{reason.title}</h3>
                     <p className="text-sm font-light">{reason.description}</p>
                   </div>
                 </li>
