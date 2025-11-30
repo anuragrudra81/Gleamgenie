@@ -33,7 +33,7 @@ export function PricingSection() {
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <h2 className="text-3xl font-semibold tracking-tighter sm:text-5xl font-headline">Simple, Transparent Pricing</h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed font-light">
               Choose the plan that's right for you. No hidden fees, ever.
             </p>
           </div>
@@ -43,14 +43,14 @@ export function PricingSection() {
             <Card key={plan.name} className={`flex flex-col ${plan.isPopular ? "border-primary shadow-2xl scale-105" : ""}`}>
               <CardHeader className="pb-4">
                 {plan.isPopular && <div className="text-sm font-semibold text-primary mb-2 text-center tracking-widest uppercase">Most Popular</div>}
-                <CardTitle className="font-headline">{plan.name}</CardTitle>
+                <CardTitle className="font-headline font-semibold">{plan.name}</CardTitle>
                 <CardDescription className="flex items-baseline">
                   <span className="text-4xl font-bold font-headline">{plan.price}</span>
-                  <span className="ml-1 text-muted-foreground">{plan.frequency}</span>
+                  <span className="ml-1 text-muted-foreground font-light">{plan.frequency}</span>
                 </CardDescription>
               </CardHeader>
               <CardContent className="grid gap-4 flex-grow">
-                <ul className="grid gap-3 text-sm text-muted-foreground">
+                <ul className="grid gap-3 text-sm text-muted-foreground font-light">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-primary" />

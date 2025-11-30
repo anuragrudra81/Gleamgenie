@@ -14,7 +14,7 @@ export function HeroSection() {
             <h1 className="font-headline text-4xl font-semibold tracking-tight text-foreground sm:text-5xl md:text-6xl">
               Your Space, Spotlessly Clean.
             </h1>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-muted-foreground font-light">
               Gleam Genie provides premium residential and commercial cleaning services in Bayside Melbourne. Experience the gold standard of luxury cleaning.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">

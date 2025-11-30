@@ -28,7 +28,7 @@ export function TestimonialsSection() {
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <h2 className="text-3xl font-semibold tracking-tighter sm:text-5xl font-headline">What Our Clients Say</h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed font-light">
               We're proud to have happy customers. Here's what they think about our service.
             </p>
           </div>
@@ -52,7 +52,7 @@ export function TestimonialsSection() {
                           {avatar && <AvatarImage src={avatar.imageUrl} alt={avatar.description} data-ai-hint={avatar.imageHint} />}
                           <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                         </Avatar>
-                        <p className="text-sm text-muted-foreground italic">"{testimonial.text}"</p>
+                        <p className="text-sm text-muted-foreground italic font-light">"{testimonial.text}"</p>
                         <p className="font-semibold font-headline">{testimonial.name}</p>
                       </CardContent>
                     </Card>
