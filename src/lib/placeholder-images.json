@@ -23,6 +23,12 @@
       "description": "Avatar for a satisfied female client",
       "imageUrl": "https://images.unsplash.com/photo-1753161023086-362835a9a673?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c2F0aXNmaWVkJTIwY2xpZW50fGVufDB8fHx8MTc2NDQ3NTI2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "satisfied client"
+    },
+    {
+      "id": "why-us-image-1",
+      "description": "A person wiping down a clean kitchen counter with a spray bottle and cloth",
+      "imageUrl": "https://images.unsplash.com/photo-1600585152220-0141b89694a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjbGVhbmluZyUyMGNvdW50ZXJ8ZW58MHx8fHwxNzY0NTQ3ODU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cleaning counter"
     }
   ]
 }
