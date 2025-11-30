@@ -51,12 +51,12 @@ export function WhyUsSection() {
             <ul className="grid gap-4">
               {reasons.map((reason) => (
                 <li key={reason.title} className="flex items-start gap-4">
-                  <div className="text-gold rounded-full p-2 mt-1">
+                  <div className="text-gold rounded-full p-0 mt-1">
                     <Check className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="font-semibold">{reason.title}</h3>
-                    <p className="text-sm text-muted-foreground font-light">{reason.description}</p>
+                    <h3 className="font-semibold text-primary">{reason.title}</h3>
+                    <p className="text-sm font-light text-primary">{reason.description}</p>
                   </div>
                 </li>
               ))}

@@ -38,13 +38,13 @@ export function ServicesSection() {
         </div>
         <div className="mx-auto grid items-start gap-8 pt-12 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-4">
           {services.map((service) => (
-            <Card key={service.title} className="text-center transition-transform transform hover:-translate-y-2 hover:shadow-xl">
+            <Card key={service.title} className="text-center transition-transform transform hover:-translate-y-2 hover:shadow-xl bg-transparent border-0 shadow-none">
               <CardHeader className="items-center">
-                <div className="p-4">{service.icon}</div>
-                <CardTitle className="font-headline font-semibold">{service.title}</CardTitle>
+                <div className="p-0">{service.icon}</div>
+                <CardTitle className="font-headline font-semibold text-primary">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground font-light">{service.description}</p>
+                <p className="text-sm font-light text-primary">{service.description}</p>
               </CardContent>
             </Card>
           ))}
