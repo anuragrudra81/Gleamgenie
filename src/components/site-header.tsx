@@ -3,15 +3,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
-import { GleamGenieLogo } from "./icons";
+import { Menu, User } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
-  { href: "#services", label: "Services" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#about", label: "About" },
-  { href: "#contact", label: "Contact" },
+  { href: "#services", label: "SERVICES" },
+  { href: "#pricing", label: "AREAS WE SERVE" },
 ];
 
 export function SiteHeader() {
@@ -19,12 +16,20 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center">
-        <Link href="/" className="mr-6 flex items-center space-x-2" prefetch={false}>
-          <GleamGenieLogo className="h-6 w-6 text-primary" />
-          <span className="font-bold">Gleam Genie</span>
-        </Link>
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+      <div className="container flex h-20 items-center">
+        <div className="flex-1">
+          <Link href="/" className="mr-6 flex items-center space-x-2" prefetch={false}>
+            <span className="font-bold text-2xl">Gleam Genie</span>
+          </Link>
+        </div>
+        <nav className="hidden md:flex items-center justify-center space-x-6 text-sm font-medium">
+          <Link
+            href={"/#"}
+            className="transition-colors hover:text-primary"
+            prefetch={false}
+          >
+            HOME
+          </Link>
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -37,8 +42,9 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">
-          <Button asChild className="hidden md:inline-flex">
-             <Link href="#contact" prefetch={false}>Book Cleaning Now</Link>
+          <Button variant="ghost" size="icon">
+            <User className="h-5 w-5" />
+            <span className="sr-only">Login</span>
           </Button>
           <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
             <SheetTrigger asChild>
@@ -49,10 +55,17 @@ export function SiteHeader() {
             </SheetTrigger>
             <SheetContent side="right">
               <Link href="/" className="mr-6 flex items-center space-x-2 mb-8">
-                <GleamGenieLogo className="h-6 w-6 text-primary" />
-                <span className="font-bold">Gleam Genie</span>
+                <span className="font-bold text-2xl">Gleam Genie</span>
               </Link>
               <div className="flex flex-col space-y-4">
+                <Link
+                  href={"/#"}
+                  className="text-lg transition-colors hover:text-primary"
+                  onClick={() => setSheetOpen(false)}
+                  prefetch={false}
+                >
+                  HOME
+                </Link>
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
@@ -64,9 +77,6 @@ export function SiteHeader() {
                     {link.label}
                   </Link>
                 ))}
-                <Button asChild className="mt-4">
-                  <Link href="#contact" onClick={() => setSheetOpen(false)} prefetch={false}>Book Cleaning Now</Link>
-                </Button>
               </div>
             </SheetContent>
           </Sheet>

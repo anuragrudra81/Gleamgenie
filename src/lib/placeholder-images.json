@@ -2,7 +2,7 @@
   "placeholderImages": [
     {
       "id": "hero-image-1",
-      "description": "A bright and clean modern living room interior",
+      "description": "A bright and clean modern living room with large window",
       "imageUrl": "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjbGVhbiUyMGxpdmluZyUyMHJvb218ZW58MHx8fHwxNzY0NDYwNDU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "clean living room"
     },
