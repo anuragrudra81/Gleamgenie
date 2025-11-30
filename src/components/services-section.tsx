@@ -3,22 +3,22 @@ import { Building2, Home, Sparkles, Truck } from "lucide-react";
 
 const services = [
   {
-    icon: <Home className="h-8 w-8 text-primary" />,
+    icon: <Home className="h-8 w-8 text-gold" />,
     title: "Home Cleaning",
     description: "Regular cleaning to keep your home fresh and tidy. Customizable schedules available.",
   },
   {
-    icon: <Building2 className="h-8 w-8 text-primary" />,
+    icon: <Building2 className="h-8 w-8 text-gold" />,
     title: "Office Cleaning",
     description: "Professional cleaning services for a productive and healthy workspace.",
   },
   {
-    icon: <Sparkles className="h-8 w-8 text-primary" />,
+    icon: <Sparkles className="h-8 w-8 text-gold" />,
     title: "Deep Cleaning",
     description: "A thorough, top-to-bottom clean for when your space needs extra attention.",
   },
   {
-    icon: <Truck className="h-8 w-8 text-primary" />,
+    icon: <Truck className="h-8 w-8 text-gold" />,
     title: "Move-In/Out",
     description: "Stress-free cleaning for empty homes to ensure a smooth transition.",
   },
@@ -40,7 +40,7 @@ export function ServicesSection() {
           {services.map((service) => (
             <Card key={service.title} className="text-center transition-transform transform hover:-translate-y-2 hover:shadow-xl">
               <CardHeader className="items-center">
-                <div className="rounded-full bg-secondary p-4">{service.icon}</div>
+                <div className="rounded-full bg-accent p-4">{service.icon}</div>
                 <CardTitle className="font-headline font-semibold">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>

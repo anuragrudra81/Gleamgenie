@@ -53,14 +53,14 @@ export function PricingSection() {
                 <ul className="grid gap-3 text-sm text-muted-foreground font-light">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-primary" />
+                      <Check className="mr-2 h-4 w-4 text-gold" />
                       {feature}
                     </li>
                   ))}
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button className="w-full" variant={plan.isPopular ? "default" : "outline"}>
+                <Button className="w-full" variant={plan.isPopular ? "gold" : "outline"}>
                   Book Cleaning Now
                 </Button>
               </CardFooter>
