@@ -18,7 +18,7 @@ export default {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         gold: {
-          DEFAULT: '#C5B358',
+          DEFAULT: '#e8d5b5',
           foreground: '#FFFFFF',
         },
         card: {
