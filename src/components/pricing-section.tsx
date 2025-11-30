@@ -32,7 +32,7 @@ export function PricingSection() {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Simple, Transparent Pricing</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Simple, Transparent Pricing</h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Choose the plan that's right for you. No hidden fees, ever.
             </p>
@@ -43,9 +43,9 @@ export function PricingSection() {
             <Card key={plan.name} className={`flex flex-col ${plan.isPopular ? "border-primary shadow-2xl scale-105" : ""}`}>
               <CardHeader className="pb-4">
                 {plan.isPopular && <div className="text-sm font-semibold text-primary mb-2 text-center tracking-widest uppercase">Most Popular</div>}
-                <CardTitle>{plan.name}</CardTitle>
+                <CardTitle className="font-headline">{plan.name}</CardTitle>
                 <CardDescription className="flex items-baseline">
-                  <span className="text-4xl font-bold">{plan.price}</span>
+                  <span className="text-4xl font-bold font-headline">{plan.price}</span>
                   <span className="ml-1 text-muted-foreground">{plan.frequency}</span>
                 </CardDescription>
               </CardHeader>

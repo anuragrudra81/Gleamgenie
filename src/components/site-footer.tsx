@@ -9,27 +9,27 @@ export function SiteFooter() {
         <div className="flex flex-col gap-4">
           <Link href="/" className="flex items-center gap-2" prefetch={false}>
             <GleamGenieLogo className="h-8 w-8 text-primary" />
-            <span className="font-bold text-xl">Gleam Genie</span>
+            <span className="font-headline font-bold text-xl">Gleam Genie</span>
           </Link>
           <p className="text-sm text-muted-foreground">
             Professional cleaning services for homes and offices. Your space, spotlessly clean.
           </p>
         </div>
         <div className="grid gap-2">
-          <h4 className="font-semibold">Quick Links</h4>
+          <h4 className="font-semibold font-headline">Quick Links</h4>
           <Link href="/#services" className="text-sm hover:text-primary transition-colors" prefetch={false}>Services</Link>
           <Link href="/#pricing" className="text-sm hover:text-primary transition-colors" prefetch={false}>Pricing</Link>
           <Link href="/#about" className="text-sm hover:text-primary transition-colors" prefetch={false}>About Us</Link>
           <Link href="/#contact" className="text-sm hover:text-primary transition-colors" prefetch={false}>Contact</Link>
         </div>
         <div className="grid gap-2">
-          <h4 className="font-semibold">Contact Us</h4>
+          <h4 className="font-semibold font-headline">Contact Us</h4>
           <a href="mailto:contact@gleamgenie.com" className="text-sm hover:text-primary transition-colors">contact@gleamgenie.com</a>
           <a href="tel:+1234567890" className="text-sm hover:text-primary transition-colors">+1 (234) 567-890</a>
           <p className="text-sm text-muted-foreground">123 Clean St, Sparkle City, 12345</p>
         </div>
         <div className="grid gap-2">
-          <h4 className="font-semibold">Follow Us</h4>
+          <h4 className="font-semibold font-headline">Follow Us</h4>
           <div className="flex gap-4">
             {/* Replace with actual social links */}
             <Link href="#" className="text-sm hover:text-primary transition-colors">Facebook</Link>

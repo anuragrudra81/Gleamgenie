@@ -30,7 +30,7 @@ export function ServicesSection() {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Our Cleaning Services</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Our Cleaning Services</h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               We offer a range of services to meet your specific cleaning needs.
             </p>
@@ -41,7 +41,7 @@ export function ServicesSection() {
             <Card key={service.title} className="text-center transition-transform transform hover:-translate-y-2 hover:shadow-xl">
               <CardHeader className="items-center">
                 <div className="rounded-full bg-secondary p-4">{service.icon}</div>
-                <CardTitle>{service.title}</CardTitle>
+                <CardTitle className="font-headline">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">{service.description}</p>

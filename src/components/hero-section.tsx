@@ -11,7 +11,7 @@ export function HeroSection() {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-16 md:py-24">
           <div className="flex flex-col items-start text-left space-y-6">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
+            <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
               Your Space, Spotlessly Clean.
             </h1>
             <p className="text-lg text-muted-foreground">

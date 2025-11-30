@@ -22,7 +22,7 @@ export function SiteHeader() {
         <div className="mr-6 flex items-center">
           <Link href="/" className="flex items-center space-x-2" prefetch={false}>
             <GleamGenieLogo className="h-7 w-7 text-primary" />
-            <span className="font-bold text-xl inline-block">Gleam Genie</span>
+            <span className="font-headline font-bold text-xl inline-block">Gleam Genie</span>
           </Link>
         </div>
         <nav className="hidden md:flex flex-1 items-center justify-center space-x-6 text-sm font-medium">
@@ -55,7 +55,7 @@ export function SiteHeader() {
             <SheetContent side="right">
               <Link href="/" className="mr-6 flex items-center space-x-2 mb-8">
                 <GleamGenieLogo className="h-7 w-7 text-primary" />
-                <span className="font-bold text-xl">Gleam Genie</span>
+                <span className="font-headline font-bold text-xl">Gleam Genie</span>
               </Link>
               <div className="flex flex-col space-y-4">
                 {navLinks.map((link) => (

@@ -27,7 +27,7 @@ export function TestimonialsSection() {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">What Our Clients Say</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">What Our Clients Say</h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               We're proud to have happy customers. Here's what they think about our service.
             </p>
@@ -53,7 +53,7 @@ export function TestimonialsSection() {
                           <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                         </Avatar>
                         <p className="text-sm text-muted-foreground italic">"{testimonial.text}"</p>
-                        <p className="font-semibold">{testimonial.name}</p>
+                        <p className="font-semibold font-headline">{testimonial.name}</p>
                       </CardContent>
                     </Card>
                   </div>
