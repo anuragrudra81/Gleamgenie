@@ -40,7 +40,7 @@ export function ServicesSection() {
           {services.map((service) => (
             <Card key={service.title} className="text-center transition-transform transform hover:-translate-y-2 hover:shadow-xl">
               <CardHeader className="items-center">
-                <div className="rounded-full bg-accent p-4">{service.icon}</div>
+                <div className="p-4">{service.icon}</div>
                 <CardTitle className="font-headline font-semibold">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
