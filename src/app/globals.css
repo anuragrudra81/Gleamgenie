@@ -9,23 +9,23 @@ body {
 @layer base {
   :root {
     --background: 80 50% 98%;
-    --foreground: 232 59% 35%;
+    --foreground: 240 5.3% 26.1%;
     --card: 80 50% 98%;
-    --card-foreground: 232 59% 35%;
+    --card-foreground: 240 5.3% 26.1%;
     --popover: 80 50% 98%;
-    --popover-foreground: 232 59% 35%;
+    --popover-foreground: 240 5.3% 26.1%;
     --primary: 232 55% 36%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 232 59% 90%;
-    --secondary-foreground: 232 59% 35%;
-    --muted: 232 59% 90%;
-    --muted-foreground: 232 59% 45%;
-    --accent: 232 59% 85%;
-    --accent-foreground: 232 59% 35%;
+    --secondary: 80 33% 94%;
+    --secondary-foreground: 240 5.3% 26.1%;
+    --muted: 80 33% 94%;
+    --muted-foreground: 240 5.3% 46.1%;
+    --accent: 80 33% 90%;
+    --accent-foreground: 240 5.3% 26.1%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 232 59% 85%;
-    --input: 232 59% 95%;
+    --border: 80 33% 90%;
+    --input: 80 33% 94%;
     --ring: 232 55% 36%;
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
