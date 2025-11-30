@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-image-1",
+      "description": "A bright and clean modern living room interior",
+      "imageUrl": "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjbGVhbiUyMGxpdmluZyUyMHJvb218ZW58MHx8fHwxNzY0NDYwNDU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "clean living room"
+    },
+    {
+      "id": "testimonial-avatar-1",
+      "description": "Avatar for a happy female client",
+      "imageUrl": "https://images.unsplash.com/photo-1542353436-312f0e1f67ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxoYXBweSUyMHBlcnNvbnxlbnwwfHx8fDE3NjQzNzc0MDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "happy person"
+    },
+    {
+      "id": "testimonial-avatar-2",
+      "description": "Avatar for a smiling male client",
+      "imageUrl": "https://images.unsplash.com/photo-1554727242-741c14fa561c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzbWlsaW5nJTIwcGVyc29ufGVufDB8fHx8MTc2NDQ3Mzc3Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smiling person"
+    },
+    {
+      "id": "testimonial-avatar-3",
+      "description": "Avatar for a satisfied female client",
+      "imageUrl": "https://images.unsplash.com/photo-1753161023086-362835a9a673?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c2F0aXNmaWVkJTIwY2xpZW50fGVufDB8fHx8MTc2NDQ3NTI2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "satisfied client"
+    }
+  ]
 }
