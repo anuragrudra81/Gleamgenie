@@ -56,7 +56,7 @@ export function WhyUsSection() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-primary">{reason.title}</h3>
-                    <p className="text-sm font-light text-primary">{reason.description}</p>
+                    <p className="text-sm font-light">{reason.description}</p>
                   </div>
                 </li>
               ))}

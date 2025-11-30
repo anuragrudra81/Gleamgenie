@@ -44,7 +44,7 @@ export function ServicesSection() {
                 <CardTitle className="font-headline font-semibold text-primary">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm font-light text-primary">{service.description}</p>
+                <p className="text-sm font-light">{service.description}</p>
               </CardContent>
             </Card>
           ))}
