@@ -8,11 +8,11 @@ body {
 
 @layer base {
   :root {
-    --background: 48 33% 98%;
+    --background: 48 80% 98%;
     --foreground: 240 5.3% 26.1%;
-    --card: 48 33% 98%;
+    --card: 48 80% 98%;
     --card-foreground: 240 5.3% 26.1%;
-    --popover: 48 33% 98%;
+    --popover: 48 80% 98%;
     --popover-foreground: 240 5.3% 26.1%;
     --primary: 232 55% 36%;
     --primary-foreground: 0 0% 100%;

@@ -25,7 +25,7 @@ const whyUsImage = PlaceHolderImages.find(p => p.id === 'why-us-image-1');
 
 export function WhyUsSection() {
   return (
-    <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-background">
+    <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-white">
       <div className="container px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="relative h-[400px] md:h-[550px] w-full rounded-lg overflow-hidden shadow-2xl">
