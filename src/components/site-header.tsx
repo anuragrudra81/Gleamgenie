@@ -19,7 +19,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-20 items-center">
-        <div className="mr-6 flex items-center">
+        <div className="mr-6 flex items-center md:hidden">
           <Link href="/" className="flex items-center space-x-2" prefetch={false}>
             <GleamGenieLogo className="h-7 w-7 text-primary" />
             <span className="font-headline font-bold text-xl inline-block">Gleam Genie</span>
@@ -42,7 +42,7 @@ export function SiteHeader() {
             <User className="h-5 w-5 mr-2" />
             Login
           </Button>
-          <Button variant="gold">
+          <Button variant="gold" className="hidden md:inline-flex">
             Book Now
           </Button>
           <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
