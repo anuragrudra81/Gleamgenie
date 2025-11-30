@@ -42,7 +42,7 @@ export function SiteHeader() {
             <User className="h-5 w-5 mr-2" />
             Login
           </Button>
-          <Button>
+          <Button variant="gold">
             Book Now
           </Button>
           <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
