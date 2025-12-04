@@ -26,11 +26,11 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
+    <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-background">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-light tracking-tighter sm:text-5xl text-primary">Our Cleaning Services</h2>
+            <h2 className="text-3xl font-extralight tracking-tighter sm:text-5xl text-primary uppercase">Our Cleaning Services</h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed font-light">
               We offer a range of services to meet your specific cleaning needs.
             </p>
@@ -40,8 +40,8 @@ export function ServicesSection() {
           {services.map((service) => (
             <Card key={service.title} className="text-center bg-transparent border-0 shadow-none">
               <CardHeader className="items-center">
-                <div className="p-0">{service.icon}</div>
-                <CardTitle className="font-light text-primary">{service.title}</CardTitle>
+                <div className="bg-transparent p-0 mb-4">{service.icon}</div>
+                <CardTitle className="font-light text-primary uppercase tracking-wider">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm font-light text-muted-foreground">{service.description}</p>

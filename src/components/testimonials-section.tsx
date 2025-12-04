@@ -23,11 +23,11 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
+    <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32 bg-background">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-light tracking-tighter sm:text-5xl text-primary">What Our Clients Say</h2>
+            <h2 className="text-3xl font-extralight tracking-tighter sm:text-5xl text-primary uppercase">What Our Clients Say</h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed font-light">
               We're proud to have happy customers. Here's what they think about our service.
             </p>
@@ -53,7 +53,7 @@ export function TestimonialsSection() {
                           <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                         </Avatar>
                         <p className="text-sm text-foreground italic font-light flex-grow">"{testimonial.text}"</p>
-                        <p className="font-medium text-primary">{testimonial.name}</p>
+                        <p className="font-light text-primary uppercase tracking-wider">{testimonial.name}</p>
                       </CardContent>
                     </Card>
                   </div>

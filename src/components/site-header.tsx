@@ -22,15 +22,15 @@ export function SiteHeader() {
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2" prefetch={false}>
           <GleamGenieLogo className="h-8 w-8 text-primary" />
-          <span className="font-bold text-xl uppercase tracking-wider inline-block">Gleam Genie</span>
+          <span className="font-bold text-xl uppercase tracking-widest inline-block">Gleam Genie</span>
         </Link>
         
-        <nav className="hidden md:flex items-center space-x-6 text-sm">
+        <nav className="hidden md:flex items-center space-x-8 text-sm uppercase tracking-widest">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="transition-colors hover:text-primary text-muted-foreground"
+              className="transition-colors hover:text-primary/80 text-primary"
               prefetch={false}
             >
               {link.label}
@@ -56,7 +56,7 @@ export function SiteHeader() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="text-lg transition-colors hover:text-primary"
+                    className="text-lg transition-colors hover:text-primary uppercase tracking-widest"
                     onClick={() => setSheetOpen(false)}
                     prefetch={false}
                   >
