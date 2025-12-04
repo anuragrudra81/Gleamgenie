@@ -11,7 +11,7 @@ export function HeroSection() {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-16 md:py-24">
           <div className="flex flex-col items-start text-left space-y-6">
-            <h1 className="font-headline text-4xl font-semibold tracking-tight text-primary sm:text-5xl md:text-6xl">
+            <h1 className="text-4xl font-light tracking-tight text-primary sm:text-5xl md:text-6xl">
               Your Space, Spotlessly Clean.
             </h1>
             <p className="text-lg text-muted-foreground font-light">
@@ -22,12 +22,11 @@ export function HeroSection() {
                 Get a Free Quote
               </Button>
               <Button size="lg" variant="outline" className="w-full sm:w-auto">
-                <Phone className="mr-2 h-5 w-5" />
                 Call Us Now
               </Button>
             </div>
           </div>
-          <div className="relative h-[400px] md:h-[550px] w-full rounded-lg overflow-hidden shadow-2xl">
+          <div className="relative h-[400px] md:h-[550px] w-full rounded-md overflow-hidden">
             {heroImage && (
               <Image
                 src={heroImage.imageUrl}

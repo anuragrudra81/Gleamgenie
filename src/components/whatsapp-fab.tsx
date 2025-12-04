@@ -11,7 +11,7 @@ export function WhatsAppFAB() {
           <Button
             asChild
             size="icon"
-            className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg z-50"
+            className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg z-50 bg-primary text-primary-foreground hover:bg-primary/90"
           >
             <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" aria-label="Contact via WhatsApp">
               <WhatsAppIcon className="h-7 w-7" />

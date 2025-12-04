@@ -32,7 +32,7 @@ export function PricingSection() {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-semibold tracking-tighter sm:text-5xl font-headline text-primary">Simple, Transparent Pricing</h2>
+            <h2 className="text-3xl font-light tracking-tighter sm:text-5xl text-primary">Simple, Transparent Pricing</h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed font-light">
               Choose the plan that's right for you. No hidden fees, ever.
             </p>
@@ -40,12 +40,12 @@ export function PricingSection() {
         </div>
         <div className="mx-auto grid max-w-sm items-start gap-8 pt-12 sm:max-w-4xl sm:grid-cols-2 lg:max-w-5xl lg:grid-cols-3">
           {pricingPlans.map((plan) => (
-            <Card key={plan.name} className={`flex flex-col ${plan.isPopular ? "border-primary shadow-2xl scale-105" : ""}`}>
+            <Card key={plan.name} className={`flex flex-col bg-transparent ${plan.isPopular ? "border-primary" : "border-border"}`}>
               <CardHeader className="pb-4">
-                {plan.isPopular && <div className="text-sm font-semibold text-primary mb-2 text-center tracking-widest uppercase">Most Popular</div>}
-                <CardTitle className="font-headline font-semibold">{plan.name}</CardTitle>
+                {plan.isPopular && <div className="text-xs font-semibold text-primary mb-2 text-center tracking-widest uppercase">Most Popular</div>}
+                <CardTitle className="font-light">{plan.name}</CardTitle>
                 <CardDescription className="flex items-baseline">
-                  <span className="text-4xl font-bold font-headline">{plan.price}</span>
+                  <span className="text-4xl font-light">{plan.price}</span>
                   <span className="ml-1 text-muted-foreground font-light">{plan.frequency}</span>
                 </CardDescription>
               </CardHeader>
@@ -53,14 +53,14 @@ export function PricingSection() {
                 <ul className="grid gap-3 text-sm text-muted-foreground font-light">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-gold" />
+                      <Check className="mr-2 h-4 w-4 text-primary" />
                       {feature}
                     </li>
                   ))}
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button className="w-full" variant={plan.isPopular ? "gold" : "outline"}>
+                <Button className="w-full" variant={plan.isPopular ? "default" : "outline"}>
                   Book Cleaning Now
                 </Button>
               </CardFooter>
