@@ -4,7 +4,7 @@ export function HeroSection() {
   return (
     <section className="relative w-full h-screen flex items-center justify-center text-center text-white animate-fade-in">
       <video
-        src="https://pixabay.com/videos/download/video-42217_large.mp4"
+        src="https://pixabay.com/videos/download/video-85630_large.mp4"
         autoPlay
         loop
         muted
