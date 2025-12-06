@@ -11,6 +11,7 @@ import { GleamGenieLogo } from "./icons";
 const navLinks = [
   { href: "/#services", label: "all services" },
   { href: "/#about", label: "about us" },
+  { href: "/gallery", label: "gallery" },
   { href: "/careers", label: "careers" },
   { href: "/#contact", label: "contact" },
 ];

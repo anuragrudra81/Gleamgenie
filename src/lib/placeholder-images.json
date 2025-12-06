@@ -29,6 +29,42 @@
       "description": "A person wiping down a clean kitchen counter with a spray bottle and cloth",
       "imageUrl": "https://images.unsplash.com/photo-1600585152220-0141b89694a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjbGVhbmluZyUyMGNvdW50ZXJ8ZW58MHx8fHwxNzY0NTQ3ODU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "cleaning counter"
+    },
+    {
+      "id": "gallery-video-1",
+      "description": "A short video showcasing a clean and modern living room, panning slowly across the furniture and sparkling surfaces.",
+      "imageUrl": "https://storage.googleapis.com/gweb-aip-images/tasks/studio/gleam-genie-gallery-video-1.mp4",
+      "imageHint": "clean livingroom"
+    },
+    {
+      "id": "gallery-image-1",
+      "description": "Sparkling clean modern kitchen with stainless steel appliances.",
+      "imageUrl": "https://images.unsplash.com/photo-1556911220-bff31c812dba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjbGVhbiUyMGtpdGNoZW58ZW58MHx8fHwxNzY0OTM5OTA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "clean kitchen"
+    },
+    {
+      "id": "gallery-image-2",
+      "description": "Immaculate bathroom with a glass shower and pristine tiles.",
+      "imageUrl": "https://images.unsplash.com/photo-1721564130821-5ac091ee399c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjbGVhbiUyMGJhdGhyb29tfGVufDB8fHx8MTc2NDk0ODQyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "clean bathroom"
+    },
+    {
+      "id": "gallery-image-3",
+      "description": "Tidy and organized home office space, ready for productivity.",
+      "imageUrl": "https://images.unsplash.com/photo-1557777948-261e80e1abc7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjbGVhbiUyMG9mZmljZXxlbnwwfHx8fDE3NjQ5OTU4MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "clean office"
+    },
+    {
+      "id": "gallery-image-4",
+      "description": "Bright and airy bedroom with a perfectly made bed.",
+      "imageUrl": "https://images.unsplash.com/photo-1556020685-ae41abfc9365?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjbGVhbiUyMGJlZHJvb218ZW58MHx8fHwxNzY0OTM5OTA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "clean bedroom"
+    },
+    {
+      "id": "gallery-image-5",
+      "description": "Gleaming hardwood floors reflecting the light.",
+      "imageUrl": "https://images.unsplash.com/photo-1583953458882-302655b5c376?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMGZsb29yfGVufDB8fHx8MTc2NDk4NDc5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "clean floor"
     }
   ]
 }
