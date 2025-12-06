@@ -39,7 +39,7 @@ export function WhyUsSection() {
               />
             )}
           </div>
-          <div className="flex flex-col justify-center space-y-6">
+          <div className="flex flex-col justify-center space-y-6 animate-fade-in-up">
             <div className="space-y-3">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-primary">
                 the gold standard of clean

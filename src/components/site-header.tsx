@@ -52,7 +52,7 @@ export function SiteHeader() {
             ))}
           </nav>
           <div className="w-px h-6 bg-border mx-4"></div>
-          <Button variant="ghost" size="sm">get a free quote</Button>
+          <Button variant="ghost" size="sm" className="transform transition-transform duration-300 hover:-translate-y-1">get a free quote</Button>
         </div>
 
 

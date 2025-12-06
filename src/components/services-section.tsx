@@ -28,7 +28,7 @@ export function ServicesSection() {
   return (
     <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-background">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center animate-fade-in-up">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tight sm:text-5xl text-primary">our cleaning services</h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed font-light">

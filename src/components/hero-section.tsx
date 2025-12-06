@@ -9,7 +9,7 @@ export function HeroSection() {
     <section className="w-full bg-background">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-16 md:py-24">
-          <div className="flex flex-col items-start text-left space-y-6">
+          <div className="flex flex-col items-start text-left space-y-6 animate-fade-in-up">
             <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-5xl md:text-6xl">
               your space, spotlessly clean.
             </h1>
@@ -22,7 +22,7 @@ export function HeroSection() {
               </Button>
             </div>
           </div>
-          <div className="relative h-[400px] md:h-[550px] w-full rounded-md overflow-hidden">
+          <div className="relative h-[400px] md:h-[550px] w-full rounded-md overflow-hidden animate-fade-in">
             {heroImage && (
               <Image
                 src={heroImage.imageUrl}
