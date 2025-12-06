@@ -6,8 +6,8 @@ import { WhatsAppFAB } from '@/components/whatsapp-fab';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Gleam Genie - Professional Cleaning Services',
-  description: 'Professional cleaning services for homes and offices. Your space, spotlessly clean.',
+  title: 'gleam genie - professional cleaning services',
+  description: 'professional cleaning services for homes and offices. your space, spotlessly clean.',
 };
 
 export default function RootLayout({

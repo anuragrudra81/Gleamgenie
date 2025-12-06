@@ -8,10 +8,10 @@ import { useState } from "react";
 import { GleamGenieLogo } from "./icons";
 
 const navLinks = [
-  { href: "/#services", label: "Services" },
-  { href: "/#pricing", label: "Pricing" },
-  { href: "/#about", label: "About Us" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/#services", label: "services" },
+  { href: "/#pricing", label: "pricing" },
+  { href: "/#about", label: "about us" },
+  { href: "/#contact", label: "contact" },
 ];
 
 export function SiteHeader() {
@@ -22,10 +22,10 @@ export function SiteHeader() {
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2" prefetch={false}>
           <GleamGenieLogo className="h-8 w-8 text-primary" />
-          <span className="font-bold text-xl uppercase tracking-widest inline-block">Gleam Genie</span>
+          <span className="font-bold text-xl tracking-widest inline-block">gleam genie</span>
         </Link>
         
-        <nav className="hidden md:flex items-center space-x-8 text-sm uppercase tracking-widest">
+        <nav className="hidden md:flex items-center space-x-8 text-sm tracking-widest">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -43,20 +43,20 @@ export function SiteHeader() {
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
                 <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle Menu</span>
+                <span className="sr-only">toggle menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
               <Link href="/" className="mr-6 flex items-center space-x-2 mb-8">
                 <GleamGenieLogo className="h-7 w-7 text-primary" />
-                <span className="font-bold text-xl uppercase tracking-wider">Gleam Genie</span>
+                <span className="font-bold text-xl tracking-wider">gleam genie</span>
               </Link>
               <div className="flex flex-col space-y-4">
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="text-lg transition-colors hover:text-primary uppercase tracking-widest"
+                    className="text-lg transition-colors hover:text-primary tracking-widest"
                     onClick={() => setSheetOpen(false)}
                     prefetch={false}
                   >

@@ -7,17 +7,17 @@ const testimonials = [
   {
     name: "Sarah L.",
     avatarId: "testimonial-avatar-1",
-    text: "Gleam Genie is a lifesaver! My apartment has never been cleaner. The team was professional, on time, and incredibly thorough. Highly recommend!",
+    text: "gleam genie is a lifesaver! my apartment has never been cleaner. the team was professional, on time, and incredibly thorough. highly recommend!",
   },
   {
     name: "Michael B.",
     avatarId: "testimonial-avatar-2",
-    text: "We use Gleam Genie for our office and the difference is night and day. A clean workspace has definitely boosted morale. Fantastic service.",
+    text: "we use gleam genie for our office and the difference is night and day. a clean workspace has definitely boosted morale. fantastic service.",
   },
   {
     name: "Jessica P.",
     avatarId: "testimonial-avatar-3",
-    text: "The deep clean service was worth every penny. They got into nooks and crannies I didn't even know existed. It feels like a brand new home.",
+    text: "the deep clean service was worth every penny. they got into nooks and crannies i didn't even know existed. it feels like a brand new home.",
   },
 ];
 
@@ -27,9 +27,9 @@ export function TestimonialsSection() {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-extralight tracking-tighter sm:text-5xl text-primary uppercase">What Our Clients Say</h2>
+            <h2 className="text-3xl font-extralight tracking-tighter sm:text-5xl text-primary">what our clients say</h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed font-light">
-              We're proud to have happy customers. Here's what they think about our service.
+              we're proud to have happy customers. here's what they think about our service.
             </p>
           </div>
         </div>
@@ -53,7 +53,7 @@ export function TestimonialsSection() {
                           <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                         </Avatar>
                         <p className="text-sm text-foreground italic font-light flex-grow">"{testimonial.text}"</p>
-                        <p className="font-light text-primary uppercase tracking-wider">{testimonial.name}</p>
+                        <p className="font-light text-primary tracking-wider">{testimonial.name}</p>
                       </CardContent>
                     </Card>
                   </div>

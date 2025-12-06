@@ -4,24 +4,24 @@ import { Check } from "lucide-react";
 
 const pricingPlans = [
   {
-    name: "Standard",
+    name: "standard",
     price: "$99",
     frequency: "per cleaning",
-    features: ["1-2 Bedrooms", "General Dusting", "Vacuuming & Mopping", "Kitchen & Bathroom Cleaning"],
+    features: ["1-2 bedrooms", "general dusting", "vacuuming & mopping", "kitchen & bathroom cleaning"],
     isPopular: false,
   },
   {
-    name: "Premium",
+    name: "premium",
     price: "$149",
     frequency: "per cleaning",
-    features: ["3-4 Bedrooms", "All Standard Features", "Inside Cabinets & Oven", "Interior Windows"],
+    features: ["3-4 bedrooms", "all standard features", "inside cabinets & oven", "interior windows"],
     isPopular: true,
   },
   {
-    name: "Deep Clean",
+    name: "deep clean",
     price: "$249",
     frequency: "one-time",
-    features: ["All Premium Features", "Baseboard & Wall Washing", "Detailed Appliance Cleaning", "Move-In / Move-Out Ready"],
+    features: ["all premium features", "baseboard & wall washing", "detailed appliance cleaning", "move-in / move-out ready"],
     isPopular: false,
   },
 ];
@@ -32,9 +32,9 @@ export function PricingSection() {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-extralight tracking-tighter sm:text-5xl text-primary uppercase">Simple, Transparent Pricing</h2>
+            <h2 className="text-3xl font-extralight tracking-tighter sm:text-5xl text-primary">simple, transparent pricing</h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed font-light">
-              Choose the plan that's right for you. No hidden fees, ever.
+              choose the plan that's right for you. no hidden fees, ever.
             </p>
           </div>
         </div>
@@ -42,8 +42,8 @@ export function PricingSection() {
           {pricingPlans.map((plan) => (
             <Card key={plan.name} className={`flex flex-col bg-card ${plan.isPopular ? "border-primary" : "border-border"}`}>
               <CardHeader className="pb-4">
-                {plan.isPopular && <div className="text-xs font-semibold text-primary mb-2 text-center tracking-widest uppercase">Most Popular</div>}
-                <CardTitle className="font-light uppercase tracking-wider">{plan.name}</CardTitle>
+                {plan.isPopular && <div className="text-xs font-semibold text-primary mb-2 text-center tracking-widest">most popular</div>}
+                <CardTitle className="font-light tracking-wider">{plan.name}</CardTitle>
                 <CardDescription className="flex items-baseline">
                   <span className="text-4xl font-extralight">{plan.price}</span>
                   <span className="ml-1 text-muted-foreground font-light">{plan.frequency}</span>
@@ -60,8 +60,8 @@ export function PricingSection() {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button className="w-full uppercase tracking-widest" variant={plan.isPopular ? "default" : "outline"}>
-                  Book Cleaning Now
+                <Button className="w-full tracking-widest" variant={plan.isPopular ? "default" : "outline"}>
+                  book cleaning now
                 </Button>
               </CardFooter>
             </Card>

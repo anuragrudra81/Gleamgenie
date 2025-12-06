@@ -10,15 +10,15 @@ export function HeroSection() {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-16 md:py-24">
           <div className="flex flex-col items-start text-left space-y-6">
-            <h1 className="text-4xl font-extralight tracking-tight text-primary sm:text-5xl md:text-6xl uppercase">
-              Your Space, Spotlessly Clean.
+            <h1 className="text-4xl font-extralight tracking-tight text-primary sm:text-5xl md:text-6xl">
+              your space, spotlessly clean.
             </h1>
             <p className="text-lg text-muted-foreground font-light">
-              Gleam Genie provides premium residential and commercial cleaning services in Bayside Melbourne. Experience the gold standard of luxury cleaning.
+              gleam genie provides premium residential and commercial cleaning services in bayside melbourne. experience the gold standard of luxury cleaning.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <Button size="lg" variant="outline" className="w-full sm:w-auto uppercase tracking-widest">
-                Get a Free Quote
+              <Button size="lg" variant="outline" className="w-full sm:w-auto tracking-widest">
+                get a free quote
               </Button>
             </div>
           </div>

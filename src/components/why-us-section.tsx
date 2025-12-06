@@ -4,20 +4,20 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const reasons = [
   {
-    title: "Trusted & Trained Professionals",
-    description: "Our cleaners are vetted, trained, and insured for your peace of mind.",
+    title: "trusted & trained professionals",
+    description: "our cleaners are vetted, trained, and insured for your peace of mind.",
   },
   {
-    title: "Eco-Friendly Products",
-    description: "We use safe, sustainable products for a healthy home and a happy planet.",
+    title: "eco-friendly products",
+    description: "we use safe, sustainable products for a healthy home and a happy planet.",
   },
   {
-    title: "Satisfaction Guaranteed",
-    description: "We're not happy unless you are. We'll re-clean any area you're not satisfied with.",
+    title: "satisfaction guaranteed",
+    description: "we're not happy unless you are. we'll re-clean any area you're not satisfied with.",
   },
   {
-    title: "Flexible & Reliable Service",
-    description: "Punctual and reliable service that respects your time. We fit into your schedule.",
+    title: "flexible & reliable service",
+    description: "punctual and reliable service that respects your time. we fit into your schedule.",
   },
 ];
 
@@ -41,11 +41,11 @@ export function WhyUsSection() {
           </div>
           <div className="flex flex-col justify-center space-y-6">
             <div className="space-y-3">
-              <h2 className="text-3xl font-extralight tracking-tighter sm:text-4xl text-primary uppercase">
-                The Gold Standard of Clean
+              <h2 className="text-3xl font-extralight tracking-tighter sm:text-4xl text-primary">
+                the gold standard of clean
               </h2>
               <p className="text-muted-foreground font-light max-w-lg">
-                We're committed to providing a cleaning service you can trust. Our meticulous attention to detail and unwavering commitment to quality set us apart.
+                we're committed to providing a cleaning service you can trust. our meticulous attention to detail and unwavering commitment to quality set us apart.
               </p>
             </div>
             <ul className="grid gap-4">
@@ -55,7 +55,7 @@ export function WhyUsSection() {
                     <Check className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-light text-primary uppercase tracking-wider">{reason.title}</h3>
+                    <h3 className="font-light text-primary tracking-wider">{reason.title}</h3>
                     <p className="text-sm font-light text-muted-foreground">{reason.description}</p>
                   </div>
                 </li>
