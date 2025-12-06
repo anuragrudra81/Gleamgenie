@@ -2,10 +2,10 @@ import Link from "next/link";
 import { GleamGenieLogo } from "./icons";
 
 const contactDetails = [
-    { label: "ABN", value: "41600925978" },
+    { label: "Office Hour(s)", value: "Monday to Saturday (8AM to 5PM)" },
     { label: "Email", value: "gleamgenie9@gmail.com", href: "mailto:gleamgenie9@gmail.com" },
     { label: "Phone", value: "+61 0472526148", href: "tel:+610472526148" },
-    { label: "Office Hour(s)", value: "Monday to Saturday (8AM to 5PM)" },
+    { label: "ABN", value: "41600925978" },
 ];
 
 export function SiteFooter() {
