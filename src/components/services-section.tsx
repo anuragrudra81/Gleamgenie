@@ -13,12 +13,12 @@ const services = [
     description: "professional cleaning services for a productive and healthy workspace.",
   },
   {
-    icon: <Sparkles className="h-8 w-8 text-primary" />,
-    title: "deep cleaning",
+    icon: <Truck className="h-8 w-8 text-primary" />,
+    title: "trade cleaning",
     description: "a thorough, top-to-bottom clean for when your space needs extra attention.",
   },
   {
-    icon: <Truck className="h-8 w-8 text-primary" />,
+    icon: <Sparkles className="h-8 w-8 text-primary" />,
     title: "move-in/out",
     description: "stress-free cleaning for empty homes to ensure a smooth transition.",
   },
