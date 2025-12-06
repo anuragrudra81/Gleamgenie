@@ -116,17 +116,20 @@ export function SiteHeader() {
         </div>
 
         <div className="hidden md:flex items-center justify-end space-x-2 ml-auto">
-          <Button
-            variant="ghost"
-            size="sm"
-            className={`transform transition-transform duration-300 hover:-translate-y-1 ${
-              isScrolled
-                ? "text-primary hover:text-primary"
-                : "text-white hover:text-white"
-            }`}
-          >
-            INSTANT QUOTE
-          </Button>
+            <Button
+                variant="ghost"
+                size="sm"
+                asChild
+                className={`transform transition-transform duration-300 hover:-translate-y-1 ${
+                isScrolled
+                    ? "text-primary hover:text-primary"
+                    : "text-white hover:text-white"
+                }`}
+            >
+                <Link href="https://calendly.com/gleamgenie" target="_blank" rel="noopener noreferrer">
+                    INSTANT QUOTE
+                </Link>
+            </Button>
         </div>
 
         <div className="flex items-center justify-end space-x-2 md:hidden ml-auto">

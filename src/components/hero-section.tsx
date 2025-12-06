@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import Link from "next/link";
 
 const heroImage = PlaceHolderImages.find(p => p.id === 'hero-image-1');
 
@@ -30,8 +31,11 @@ export function HeroSection() {
           <Button 
             size="lg"
             variant="outline"
+            asChild
             className="w-full sm:w-auto tracking-wide transform transition-transform duration-300 hover:-translate-y-1 bg-transparent border-white text-white hover:bg-white hover:text-primary">
-            INSTANT QUOTE
+            <Link href="https://calendly.com/gleamgenie" target="_blank" rel="noopener noreferrer">
+                INSTANT QUOTE
+            </Link>
           </Button>
         </div>
       </div>
