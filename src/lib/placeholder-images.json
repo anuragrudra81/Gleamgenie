@@ -45,7 +45,7 @@
     {
       "id": "gallery-image-2",
       "description": "Immaculate bathroom with a glass shower and pristine tiles.",
-      "imageUrl": "https://images.unsplash.com/photo-1721564130821-5ac091ee399c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjbGVhbiUyMGJhdGhyb29tfGVufDB8fHx8MTc2NDk0ODQyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1721564130821-5ac091ee399c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjbGVhbiUyMGJhdGhyb29tfGVufDB8fHx8MTc2NDk0ODQyM3ww&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "clean bathroom"
     },
     {
@@ -57,14 +57,20 @@
     {
       "id": "gallery-image-4",
       "description": "Bright and airy bedroom with a perfectly made bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1556020685-ae41abfc9365?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjbGVhbiUyMGJlZHJvb218ZW58MHx8fHwxNzY0OTM5OTA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1556020685-ae41abfc9365?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjbGVhbiUyMGJlZHJvb218ZW58MHx8fHwxNzY0OTM5OTA3fDA&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "clean bedroom"
     },
     {
       "id": "gallery-image-5",
       "description": "Gleaming hardwood floors reflecting the light.",
-      "imageUrl": "https://images.unsplash.com/photo-1583953458882-302655b5c376?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMGZsb29yfGVufDB8fHx8MTc2NDk4NDc5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1583953458882-302655b5c376?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMGZsb29yfGVufDB8fHx8MTc2NDk4NDc5NHww&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "clean floor"
+    },
+    {
+      "id": "journey-image-1",
+      "description": "Norah, the founder of Gleam Genie, smiling in a white t-shirt with the company logo.",
+      "imageUrl": "https://storage.googleapis.com/gweb-aip-images/tasks/studio/gleam-genie-norah.jpg",
+      "imageHint": "founder photo"
     }
   ]
 }
