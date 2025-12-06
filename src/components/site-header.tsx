@@ -32,13 +32,13 @@ export function SiteHeader() {
         isScrolled ? "border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" : "bg-transparent"
       }`}
     >
-      <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2" prefetch={false}>
+      <div className="container flex h-16 items-center">
+        <Link href="/" className="flex items-center space-x-2 mr-auto md:mr-0" prefetch={false}>
           <GleamGenieLogo className="h-7 w-7 text-primary" />
           <span className="font-semibold text-lg tracking-wide inline-block">gleam genie</span>
         </Link>
         
-        <div className="hidden md:flex items-center space-x-2">
+        <div className="hidden md:flex flex-1 justify-center">
           <nav className="flex items-center space-x-6 text-sm font-medium">
             {navLinks.map((link) => (
               <Link
@@ -51,12 +51,14 @@ export function SiteHeader() {
               </Link>
             ))}
           </nav>
-          <div className="w-px h-6 bg-border mx-4"></div>
+        </div>
+
+        <div className="hidden md:flex items-center justify-end space-x-2 ml-auto">
           <Button variant="ghost" size="sm" className="transform transition-transform duration-300 hover:-translate-y-1">get a free quote</Button>
         </div>
 
 
-        <div className="flex items-center justify-end space-x-2 md:hidden">
+        <div className="flex items-center justify-end space-x-2 md:hidden ml-auto">
           <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
