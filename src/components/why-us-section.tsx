@@ -28,7 +28,7 @@ export function WhyUsSection() {
     <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
       <div className="container px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <div className="relative h-[400px] md:h-[550px] w-full rounded-md overflow-hidden">
+          <div className="relative h-[400px] md:h-[550px] w-full rounded-md overflow-hidden animate-fade-in">
             {whyUsImage && (
               <Image
                 src={whyUsImage.imageUrl}
@@ -41,7 +41,7 @@ export function WhyUsSection() {
           </div>
           <div className="flex flex-col justify-center space-y-6">
             <div className="space-y-3">
-              <h2 className="text-3xl font-extralight tracking-tighter sm:text-4xl text-primary">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-primary">
                 the gold standard of clean
               </h2>
               <p className="text-muted-foreground font-light max-w-lg">
@@ -49,13 +49,13 @@ export function WhyUsSection() {
               </p>
             </div>
             <ul className="grid gap-4">
-              {reasons.map((reason) => (
-                <li key={reason.title} className="flex items-start gap-4">
+              {reasons.map((reason, index) => (
+                <li key={reason.title} className="flex items-start gap-4 animate-fade-in-up" style={{ animationDelay: `${index * 100}ms` }}>
                   <div className="p-0 mt-1">
                     <Check className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-light text-primary tracking-wider">{reason.title}</h3>
+                    <h3 className="font-semibold text-primary tracking-wide">{reason.title}</h3>
                     <p className="text-sm font-light text-muted-foreground">{reason.description}</p>
                   </div>
                 </li>
