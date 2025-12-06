@@ -11,30 +11,37 @@ const contactDetails = [
 export function SiteFooter() {
   return (
     <footer className="bg-secondary text-secondary-foreground py-8">
-      <div className="container flex flex-col md:flex-row items-center justify-between gap-8">
-        <div className="flex items-center gap-4">
-          <Link href="/" className="flex items-center gap-2" prefetch={false}>
-            <GleamGenieLogo className="h-10 w-10 text-primary" />
-            <span className="font-semibold text-xl tracking-wide sr-only">gleam genie</span>
-          </Link>
-          <div className="text-xs text-muted-foreground font-light text-center md:text-left">
-            © {new Date().getFullYear()} gleam genie.
-            <br />
-            all rights reserved.
+      <div className="container flex flex-col items-center gap-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 w-full">
+          <div className="flex items-center gap-4">
+            <Link href="/" className="flex items-center gap-2" prefetch={false}>
+              <GleamGenieLogo className="h-10 w-10 text-primary" />
+              <span className="font-semibold text-xl tracking-wide sr-only">gleam genie</span>
+            </Link>
+          </div>
+          
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-sm w-full md:w-auto">
+              {contactDetails.map(detail => (
+                  <div key={detail.label} className="text-center md:text-left">
+                      <p className="font-semibold text-primary tracking-wide">{detail.label}</p>
+                      {detail.href ? (
+                           <a href={detail.href} className="text-muted-foreground font-light hover:text-primary transition-colors">{detail.value}</a>
+                      ): (
+                          <p className="text-muted-foreground font-light">{detail.value}</p>
+                      )}
+                  </div>
+              ))}
           </div>
         </div>
-        
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-sm w-full md:w-auto">
-            {contactDetails.map(detail => (
-                <div key={detail.label} className="text-center md:text-left">
-                    <p className="font-semibold text-primary tracking-wide">{detail.label}</p>
-                    {detail.href ? (
-                         <a href={detail.href} className="text-muted-foreground font-light hover:text-primary transition-colors">{detail.value}</a>
-                    ): (
-                        <p className="text-muted-foreground font-light">{detail.value}</p>
-                    )}
-                </div>
-            ))}
+
+        <div className="w-full border-t border-border pt-8 mt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-muted-foreground font-light">
+            <div className="text-center sm:text-left mb-4 sm:mb-0">
+                © {new Date().getFullYear()} gleam genie. All rights reserved.
+            </div>
+            <div className="flex gap-4">
+                <Link href="/terms" className="hover:text-primary transition-colors">Terms & Conditions</Link>
+                <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+            </div>
         </div>
       </div>
     </footer>
