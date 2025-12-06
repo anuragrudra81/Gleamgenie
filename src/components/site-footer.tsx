@@ -31,9 +31,9 @@ export function SiteFooter() {
         <div className="grid gap-2">
           <h4 className="font-semibold tracking-wide">follow us</h4>
           <div className="flex gap-4">
-            <Link href="#" className="text-sm font-light text-muted-foreground hover:text-primary transition-colors">facebook</Link>
-            <Link href="#" className="text-sm font-light text-muted-foreground hover:text-primary transition-colors">instagram</Link>
-            <Link href="#" className="text-sm font-light text-muted-foreground hover:text-primary transition-colors">twitter</Link>
+            <Link href="#" className="text-sm font-light text-muted-foreground hover:text-primary transition-colors" prefetch={false}>facebook</Link>
+            <Link href="#" className="text-sm font-light text-muted-foreground hover:text-primary transition-colors" prefetch={false}>instagram</Link>
+            <Link href="#" className="text-sm font-light text-muted-foreground hover:text-primary transition-colors" prefetch={false}>linkedin</Link>
           </div>
         </div>
       </div>
