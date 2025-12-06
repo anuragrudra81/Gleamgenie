@@ -4,6 +4,7 @@ import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 import { WhatsAppFAB } from '@/components/whatsapp-fab';
 import { Toaster } from '@/components/ui/toaster';
+import { SocialFABs } from '@/components/social-fabs';
 
 export const metadata: Metadata = {
   title: 'gleam genie - professional cleaning services',
@@ -28,6 +29,7 @@ export default function RootLayout({
           {children}
         </main>
         <SiteFooter />
+        <SocialFABs />
         <WhatsAppFAB />
         <Toaster />
       </body>
