@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -54,7 +55,7 @@ export function SiteHeader() {
         </div>
 
         <div className="hidden md:flex items-center justify-end space-x-2 ml-auto">
-          <Button variant="ghost" size="sm" className={`transform transition-transform duration-300 hover:-translate-y-1 ${isScrolled ? 'text-primary hover:text-primary' : 'text-white hover:text-white'}`}>instant quote</Button>
+          <Button variant="ghost" size="sm" className={`transform transition-transform duration-300 hover:-translate-y-1 ${isScrolled ? 'text-primary hover:text-primary' : 'text-white hover:text-white'}`}>INSTANT QUOTE</Button>
         </div>
 
 

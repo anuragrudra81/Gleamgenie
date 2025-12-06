@@ -31,7 +31,7 @@ export function HeroSection() {
             size="lg"
             variant="outline"
             className="w-full sm:w-auto tracking-wide transform transition-transform duration-300 hover:-translate-y-1 bg-transparent border-white text-white hover:bg-white hover:text-primary">
-            instant quote
+            INSTANT QUOTE
           </Button>
         </div>
       </div>
