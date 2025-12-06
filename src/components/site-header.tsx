@@ -29,7 +29,8 @@ import { GleamGenieLogo } from "./icons";
 const serviceLinks = [
   { href: "/services/home-cleaning", label: "home cleaning" },
   { href: "/services/office-cleaning", label: "office cleaning" },
-  { href: "/services/builder-cleaning", label: "builder cleaning" },
+  { href: "/services/construction-cleaning", label: "construction cleaning" },
+  { href: "/services/childcare-cleaning", label: "childcare cleaning" },
   { href: "/services/move-in-out", label: "move-in/out" },
 ];
 

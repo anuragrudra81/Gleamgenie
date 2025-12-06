@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Building2, Home, Truck } from "lucide-react";
+import { Building2, Home, Construction, Baby } from "lucide-react";
 import Link from "next/link";
 
 const services = [
@@ -17,10 +17,16 @@ const services = [
     href: "/services/office-cleaning",
   },
   {
-    icon: <Truck className="h-8 w-8 text-primary" />,
-    title: "builder cleaning",
+    icon: <Construction className="h-8 w-8 text-primary" />,
+    title: "construction cleaning",
     description: "a thorough, top-to-bottom clean for when your space needs extra attention.",
-    href: "/services/builder-cleaning",
+    href: "/services/construction-cleaning",
+  },
+   {
+    icon: <Baby className="h-8 w-8 text-primary" />,
+    title: "childcare cleaning",
+    description: "specialized cleaning for childcare centers, ensuring a safe and hygienic environment for children.",
+    href: "/services/childcare-cleaning",
   },
 ];
 
@@ -36,7 +42,7 @@ export function ServicesSection() {
             </p>
           </div>
         </div>
-        <div className="mx-auto grid items-start gap-8 pt-12 sm:max-w-4xl sm:grid-cols-1 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
+        <div className="mx-auto grid items-start gap-8 pt-12 sm:max-w-4xl sm:grid-cols-1 md:gap-12 lg:max-w-5xl lg:grid-cols-4">
           {services.map((service, index) => (
             <Link href={service.href} key={service.title} className="group">
               <Card className="text-center bg-transparent border-0 shadow-none animate-fade-in-up group-hover:bg-secondary/50 transition-colors h-full" style={{ animationDelay: `${index * 100}ms` }}>
