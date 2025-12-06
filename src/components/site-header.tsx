@@ -2,6 +2,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -43,6 +44,8 @@ export function SiteHeader() {
   const [isSheetOpen, setSheetOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isServicesMenuOpen, setIsServicesMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,18 +55,38 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const headerIsTransparent = isHomePage && !isScrolled;
+
   const linkClassName = `transition-colors ${
-    isScrolled
-      ? "text-muted-foreground hover:text-primary"
-      : "text-white/80 hover:text-white"
+    headerIsTransparent
+      ? "text-white/80 hover:text-white"
+      : "text-muted-foreground hover:text-primary"
+  }`;
+
+  const iconClassName = `h-7 w-7 ${
+    headerIsTransparent ? "text-white" : "text-primary"
+  }`;
+
+  const brandTextClassName = `font-semibold text-lg tracking-wide inline-block ${
+    headerIsTransparent ? "text-white" : "text-primary"
+  }`;
+  
+  const mobileMenuClassName = `${
+    headerIsTransparent ? "text-white" : "text-primary"
+  }`;
+  
+  const quoteButtonClassName = `transform transition-transform duration-300 hover:-translate-y-1 ${
+    headerIsTransparent
+      ? "text-white hover:text-white"
+      : "text-primary hover:text-primary"
   }`;
 
   return (
     <header
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled
-          ? "border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
-          : "bg-transparent"
+        headerIsTransparent
+          ? "bg-transparent"
+          : "border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
       }`}
     >
       <div className="container flex h-16 items-center">
@@ -73,14 +96,10 @@ export function SiteHeader() {
           prefetch={false}
         >
           <GleamGenieLogo
-            className={`h-7 w-7 ${
-              isScrolled ? "text-primary" : "text-white"
-            }`}
+            className={iconClassName}
           />
           <span
-            className={`font-semibold text-lg tracking-wide inline-block ${
-              isScrolled ? "text-primary" : "text-white"
-            }`}
+            className={brandTextClassName}
           >
             gleam genie
           </span>
@@ -123,11 +142,7 @@ export function SiteHeader() {
                 variant="ghost"
                 size="sm"
                 asChild
-                className={`transform transition-transform duration-300 hover:-translate-y-1 ${
-                isScrolled
-                    ? "text-primary hover:text-primary"
-                    : "text-white hover:text-white"
-                }`}
+                className={quoteButtonClassName}
             >
                 <Link href="https://calendly.com/gleamgenie" target="_blank" rel="noopener noreferrer">
                     INSTANT QUOTE
@@ -141,7 +156,7 @@ export function SiteHeader() {
               <Button
                 variant="ghost"
                 size="icon"
-                className={`${isScrolled ? "text-primary" : "text-white"}`}
+                className={mobileMenuClassName}
               >
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">toggle menu</span>
