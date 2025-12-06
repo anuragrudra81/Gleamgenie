@@ -54,7 +54,7 @@ export function SiteHeader() {
         </div>
 
         <div className="hidden md:flex items-center justify-end space-x-2 ml-auto">
-          <Button variant="ghost" size="sm" className="transform transition-transform duration-300 hover:-translate-y-1">get a free quote</Button>
+          <Button variant="ghost" size="sm" className="transform transition-transform duration-300 hover:-translate-y-1">GET A FREE QUOTE</Button>
         </div>
 
 

@@ -18,7 +18,7 @@ export function HeroSection() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <Button size="lg" className="w-full sm:w-auto tracking-wide transform transition-transform duration-300 hover:-translate-y-1">
-                get a free quote
+                GET A FREE QUOTE
               </Button>
             </div>
           </div>
