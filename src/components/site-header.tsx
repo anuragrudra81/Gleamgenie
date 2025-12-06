@@ -42,6 +42,7 @@ const mainNavLinks = [
 export function SiteHeader() {
   const [isSheetOpen, setSheetOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isServicesMenuOpen, setIsServicesMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -87,19 +88,21 @@ export function SiteHeader() {
 
         <div className="hidden md:flex flex-1 justify-center">
           <nav className="flex items-center space-x-6 text-sm font-medium">
-            <DropdownMenu>
-              <DropdownMenuTrigger className={`flex items-center gap-1 ${linkClassName}`}>
-                all services <ChevronDown className="h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                {serviceLinks.map((link) => (
-                  <DropdownMenuItem key={link.href} asChild>
-                    <Link href={link.href} prefetch={false}>
-                      {link.label}
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
+            <DropdownMenu open={isServicesMenuOpen} onOpenChange={setIsServicesMenuOpen}>
+                <div onMouseEnter={() => setIsServicesMenuOpen(true)} onMouseLeave={() => setIsServicesMenuOpen(false)}>
+                    <DropdownMenuTrigger className={`flex items-center gap-1 ${linkClassName}`} onMouseEnter={() => setIsServicesMenuOpen(true)}>
+                        all services <ChevronDown className="h-4 w-4" />
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                        {serviceLinks.map((link) => (
+                        <DropdownMenuItem key={link.href} asChild>
+                            <Link href={link.href} prefetch={false}>
+                            {link.label}
+                            </Link>
+                        </DropdownMenuItem>
+                        ))}
+                    </DropdownMenuContent>
+                </div>
             </DropdownMenu>
 
             {mainNavLinks.map((link) => (
