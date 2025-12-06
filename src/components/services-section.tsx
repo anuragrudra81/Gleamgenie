@@ -1,18 +1,18 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Building2, Home, Sparkles, Truck } from "lucide-react";
+import { Building2, Home, Truck } from "lucide-react";
 import Link from "next/link";
 
 const services = [
   {
     icon: <Home className="h-8 w-8 text-primary" />,
-    title: "home cleaning",
+    title: "residential cleaning",
     description: "regular cleaning to keep your home fresh and tidy. customizable schedules available.",
     href: "/services/home-cleaning",
   },
   {
     icon: <Building2 className="h-8 w-8 text-primary" />,
-    title: "office cleaning",
+    title: "commercial office cleaning",
     description: "professional cleaning services for a productive and healthy workspace.",
     href: "/services/office-cleaning",
   },
@@ -21,12 +21,6 @@ const services = [
     title: "builder cleaning",
     description: "a thorough, top-to-bottom clean for when your space needs extra attention.",
     href: "/services/builder-cleaning",
-  },
-  {
-    icon: <Sparkles className="h-8 w-8 text-primary" />,
-    title: "move-in/out",
-    description: "stress-free cleaning for empty homes to ensure a smooth transition.",
-    href: "/services/move-in-out",
   },
 ];
 
@@ -42,7 +36,7 @@ export function ServicesSection() {
             </p>
           </div>
         </div>
-        <div className="mx-auto grid items-start gap-8 pt-12 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-4">
+        <div className="mx-auto grid items-start gap-8 pt-12 sm:max-w-4xl sm:grid-cols-1 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
           {services.map((service, index) => (
             <Link href={service.href} key={service.title} className="group">
               <Card className="text-center bg-transparent border-0 shadow-none animate-fade-in-up group-hover:bg-secondary/50 transition-colors h-full" style={{ animationDelay: `${index * 100}ms` }}>
