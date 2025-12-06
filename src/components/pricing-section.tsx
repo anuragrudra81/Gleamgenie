@@ -4,23 +4,20 @@ import { Check } from "lucide-react";
 
 const pricingPlans = [
   {
-    name: "standard",
-    price: "$99",
-    frequency: "per cleaning",
+    name: "BRONZE PACKAGE",
+    frequency: "A light refresh to keep your home tidy. Perfect for regular upkeep. The Bronze Package covers all the essential tasks to keep your space fresh, tidy, and guest ready.",
     features: ["Vacuuming and mopping all floors", "Wipe down all surfaces, countertops (including shower screens & baths)", "Clean Toilets & Basins", "Empty rubbish bins"],
     isPopular: false,
   },
   {
-    name: "premium",
-    price: "$149",
-    frequency: "per cleaning",
+    name: "SILVER PACKAGE",
+    frequency: "A light refresh to keep your home tidy. Perfect for regular upkeep. The Bronze Package covers all the essential tasks to keep your space fresh, tidy, and guest ready.",
     features: ["3-4 bedrooms", "all standard features", "inside cabinets & oven", "interior windows"],
-    isPopular: true,
+    isPopular: false,
   },
   {
     name: "deep clean",
-    price: "$249",
-    frequency: "one-time",
+    frequency: "Customize your clean with our Gold add-ons options, available for both one-off services and ongoing regular cleans.",
     features: ["all premium features", "baseboard & wall washing", "detailed appliance cleaning", "move-in / move-out ready"],
     isPopular: false,
   },
