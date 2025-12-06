@@ -7,7 +7,7 @@ const pricingPlans = [
     name: "standard",
     price: "$99",
     frequency: "per cleaning",
-    features: ["1-2 bedrooms", "general dusting", "vacuuming & mopping", "kitchen & bathroom cleaning"],
+    features: ["Vacuuming and mopping all floors", "Wipe down all surfaces, countertops (including shower screens & baths)", "Clean Toilets & Basins", "Empty rubbish bins"],
     isPopular: false,
   },
   {
