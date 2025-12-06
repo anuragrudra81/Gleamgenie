@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -16,6 +17,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { useState } from "react";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -31,6 +33,7 @@ const formSchema = z.object({
 
 export function ContactSection() {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -40,13 +43,35 @@ export function ContactSection() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: "message sent!",
-      description: "thanks for reaching out. we'll get back to you shortly.",
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    try {
+      const response = await fetch('/api/email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        throw new Error('Something went wrong.');
+      }
+
+      toast({
+        title: "message sent!",
+        description: "thanks for reaching out. we'll get back to you shortly.",
+      });
+      form.reset();
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "uh oh! something went wrong.",
+        description: "there was a problem sending your message. please try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -110,8 +135,8 @@ export function ContactSection() {
                       </FormItem>
                     )}
                   />
-                  <Button type="submit" className="w-full tracking-wide transform transition-transform duration-300 hover:-translate-y-1" size="lg">
-                    send message
+                  <Button type="submit" disabled={isSubmitting} className="w-full tracking-wide transform transition-transform duration-300 hover:-translate-y-1" size="lg">
+                    {isSubmitting ? 'sending...' : 'send message'}
                   </Button>
                 </form>
               </Form>
