@@ -41,6 +41,7 @@ export function SiteFooter() {
             <div className="flex gap-4">
                 <Link href="/terms" className="hover:text-primary transition-colors">Terms & Conditions</Link>
                 <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+                <Link href="/career" className="hover:text-primary transition-colors">Careers</Link>
             </div>
         </div>
       </div>
