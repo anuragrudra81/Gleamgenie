@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Building2, Home, Sparkles, Truck } from "lucide-react";
 
@@ -14,7 +15,7 @@ const services = [
   },
   {
     icon: <Truck className="h-8 w-8 text-primary" />,
-    title: "trade cleaning",
+    title: "builder cleaning",
     description: "a thorough, top-to-bottom clean for when your space needs extra attention.",
   },
   {
