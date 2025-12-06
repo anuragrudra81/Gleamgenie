@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
     const { name, email, message } = parsed.data;
 
     const { data, error } = await resend.emails.send({
-      from: 'Gleam Genie Contact <onboarding@resend.dev>',
+      from: 'Gleam Genie <noreply@gleamgenie.com.au>',
       to: ['admin@gleamgenie.com.au'],
       subject: `New message from ${name} via Gleam Genie`,
       html: `
