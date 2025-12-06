@@ -5,6 +5,7 @@ import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 import { Toaster } from '@/components/ui/toaster';
 import { SocialLinks } from '@/components/social-links';
+import { WhatsAppButton } from '@/components/whatsapp-button';
 
 export const metadata: Metadata = {
   title: 'gleam genie - professional cleaning services',
@@ -30,6 +31,7 @@ export default function RootLayout({
         </main>
         <SiteFooter />
         <SocialLinks />
+        <WhatsAppButton />
         <Toaster />
       </body>
     </html>
