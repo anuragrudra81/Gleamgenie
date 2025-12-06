@@ -3,7 +3,6 @@ import Link from "next/link";
 const socialLinks = [
   { href: "https://instagram.com", label: "instagram" },
   { href: "https://facebook.com", label: "facebook" },
-  { href: "https://linkedin.com", label: "linkedin" },
 ];
 
 export function SocialLinks() {
