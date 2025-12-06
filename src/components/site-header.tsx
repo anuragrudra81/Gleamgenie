@@ -8,9 +8,9 @@ import { useState, useEffect } from "react";
 import { GleamGenieLogo } from "./icons";
 
 const navLinks = [
-  { href: "/#services", label: "services" },
-  { href: "/#pricing", label: "pricing" },
+  { href: "/#services", label: "all services" },
   { href: "/#about", label: "about us" },
+  { href: "/careers", label: "careers" },
   { href: "/#contact", label: "contact" },
 ];
 

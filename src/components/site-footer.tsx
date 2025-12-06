@@ -17,9 +17,9 @@ export function SiteFooter() {
         </div>
         <div className="grid gap-2">
           <h4 className="font-semibold tracking-wide">quick links</h4>
-          <Link href="/#services" className="text-sm font-light text-muted-foreground hover:text-primary transition-colors" prefetch={false}>services</Link>
-          <Link href="/#pricing" className="text-sm font-light text-muted-foreground hover:text-primary transition-colors" prefetch={false}>pricing</Link>
+          <Link href="/#services" className="text-sm font-light text-muted-foreground hover:text-primary transition-colors" prefetch={false}>all services</Link>
           <Link href="/#about" className="text-sm font-light text-muted-foreground hover:text-primary transition-colors" prefetch={false}>about us</Link>
+          <Link href="/careers" className="text-sm font-light text-muted-foreground hover:text-primary transition-colors" prefetch={false}>careers</Link>
           <Link href="/#contact" className="text-sm font-light text-muted-foreground hover:text-primary transition-colors" prefetch={false}>contact</Link>
         </div>
         <div className="grid gap-2">
