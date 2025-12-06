@@ -1,27 +1,32 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Building2, Home, Sparkles, Truck } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
     icon: <Home className="h-8 w-8 text-primary" />,
     title: "home cleaning",
     description: "regular cleaning to keep your home fresh and tidy. customizable schedules available.",
+    href: "/services/home-cleaning",
   },
   {
     icon: <Building2 className="h-8 w-8 text-primary" />,
     title: "office cleaning",
     description: "professional cleaning services for a productive and healthy workspace.",
+    href: "/services/office-cleaning",
   },
   {
     icon: <Truck className="h-8 w-8 text-primary" />,
     title: "builder cleaning",
     description: "a thorough, top-to-bottom clean for when your space needs extra attention.",
+    href: "/services/builder-cleaning",
   },
   {
     icon: <Sparkles className="h-8 w-8 text-primary" />,
     title: "move-in/out",
     description: "stress-free cleaning for empty homes to ensure a smooth transition.",
+    href: "/services/move-in-out",
   },
 ];
 
@@ -39,15 +44,17 @@ export function ServicesSection() {
         </div>
         <div className="mx-auto grid items-start gap-8 pt-12 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-4">
           {services.map((service, index) => (
-            <Card key={service.title} className="text-center bg-transparent border-0 shadow-none animate-fade-in-up" style={{ animationDelay: `${index * 100}ms` }}>
-              <CardHeader className="items-center">
-                <div className="bg-transparent p-0 mb-4">{service.icon}</div>
-                <CardTitle className="font-semibold text-primary tracking-wide">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm font-light text-muted-foreground">{service.description}</p>
-              </CardContent>
-            </Card>
+            <Link href={service.href} key={service.title} className="group">
+              <Card className="text-center bg-transparent border-0 shadow-none animate-fade-in-up group-hover:bg-secondary/50 transition-colors h-full" style={{ animationDelay: `${index * 100}ms` }}>
+                <CardHeader className="items-center">
+                  <div className="bg-transparent p-0 mb-4">{service.icon}</div>
+                  <CardTitle className="font-semibold text-primary tracking-wide">{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm font-light text-muted-foreground">{service.description}</p>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>

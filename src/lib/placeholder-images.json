@@ -71,6 +71,30 @@
       "description": "Norah, the founder of Gleam Genie, smiling in a white t-shirt with the company logo.",
       "imageUrl": "https://storage.googleapis.com/gweb-aip-images/tasks/studio/gleam-genie-norah.jpg",
       "imageHint": "founder photo"
+    },
+    {
+      "id": "service-home-cleaning",
+      "description": "A bright, clean living room with sunlight streaming in.",
+      "imageUrl": "https://images.unsplash.com/photo-1597406462800-280ba190eb4c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjbGVhbiUyMGxpdmluZ3Jvb218ZW58MHx8fHwxNzY0OTM5OTA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "clean livingroom"
+    },
+    {
+      "id": "service-office-cleaning",
+      "description": "A modern, clean open-plan office space.",
+      "imageUrl": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjbGVhbiUyMG9mZmljZXxlbnwwfHx8fDE3NjQ5OTU4MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "clean office"
+    },
+    {
+      "id": "service-builder-cleaning",
+      "description": "A newly constructed room being cleaned, with dust sheets on the floor.",
+      "imageUrl": "https://images.unsplash.com/photo-1572946391848-d17c9e622e16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb25zdHJ1Y3Rpb24lMjBjbGVhbmluZ3xlbnwwfHx8fDE3NjQ5OTg4MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "construction cleaning"
+    },
+    {
+      "id": "service-move-in-out",
+      "description": "An empty, clean room with packed boxes to one side.",
+      "imageUrl": "https://images.unsplash.com/photo-1577702312572-5bb9328a9f15?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb3ZpbmclMjBib3hlc3xlbnwwfHx8fDE3NjQ5NTQyMzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "moving boxes"
     }
   ]
 }
