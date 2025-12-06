@@ -93,7 +93,7 @@ export function SiteHeader() {
                     <DropdownMenuTrigger className={`flex items-center gap-1 ${linkClassName}`} onMouseEnter={() => setIsServicesMenuOpen(true)}>
                         all services <ChevronDown className="h-4 w-4" />
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent className="bg-background">
+                    <DropdownMenuContent className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
                         {serviceLinks.map((link) => (
                         <DropdownMenuItem key={link.href} asChild>
                             <Link href={link.href} prefetch={false}>
