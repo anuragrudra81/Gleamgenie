@@ -35,7 +35,6 @@ const serviceLinks = [
 const mainNavLinks = [
   { href: "/#about", label: "about us" },
   { href: "/gallery", label: "gallery" },
-  { href: "/careers", label: "careers" },
   { href: "/#contact", label: "contact" },
 ];
 
