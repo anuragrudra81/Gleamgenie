@@ -42,7 +42,7 @@ export function ServicesSection() {
             </p>
           </div>
         </div>
-        <div className="mx-auto grid items-start gap-8 pt-12 sm:max-w-4xl sm:grid-cols-1 md:gap-12 lg:max-w-5xl lg:grid-cols-4">
+        <div className="mx-auto grid items-start gap-8 pt-12 sm:max-w-4xl grid-cols-1 sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-4">
           {services.map((service, index) => (
             <Link href={service.href} key={service.title} className="group">
               <Card className="text-center bg-transparent border-0 shadow-none animate-fade-in-up group-hover:bg-secondary/50 transition-all duration-300 h-full group-hover:scale-105" style={{ animationDelay: `${index * 100}ms` }}>

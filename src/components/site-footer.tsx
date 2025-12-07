@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import { GleamGenieLogo } from "./icons";
 
@@ -11,7 +12,7 @@ const contactDetails = [
 export function SiteFooter() {
   return (
     <footer className="bg-secondary text-secondary-foreground py-8">
-      <div className="container flex flex-col items-center gap-8">
+      <div className="container flex flex-col items-center gap-8 px-4 md:px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 w-full">
           <div className="flex items-center gap-4">
             <Link href="/" className="flex items-center gap-2" prefetch={false}>

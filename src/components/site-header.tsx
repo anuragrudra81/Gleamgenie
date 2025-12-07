@@ -72,7 +72,7 @@ export function SiteHeader() {
   }`;
   
   const mobileMenuClassName = `${
-    headerIsTransparent ? "text-white" : "text-primary"
+    headerIsTransparent ? "text-white hover:text-white/80" : "text-primary hover:text-primary/80"
   }`;
   
   const quoteButtonClassName = `transform transition-transform duration-300 hover:-translate-y-1 ${
