@@ -50,7 +50,7 @@ export default function GalleryPage() {
                 className="object-cover"
                 data-ai-hint={item.imageHint}
               />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-end justify-end text-right p-4">
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-end justify-end text-right p-4">
                 <p className="text-white text-sm font-semibold">Brighton</p>
                 <p className="text-white text-xs font-light">{item.description}</p>
               </div>

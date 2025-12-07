@@ -54,7 +54,7 @@ export function PricingSection() {
         </div>
         <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-1 md:gap-12 lg:max-w-5xl lg:grid-cols-3 pt-12">
           {packages.map((pkg) => (
-            <Card key={pkg.title} className="h-full flex flex-col">
+            <Card key={pkg.title} className="h-full flex flex-col transition-transform duration-300 hover:scale-105">
               <CardHeader>
                 <CardTitle className="uppercase tracking-wider">{pkg.title}</CardTitle>
                 <CardDescription className="font-light">{pkg.description}</CardDescription>

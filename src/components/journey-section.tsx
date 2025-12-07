@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const journeyImage = PlaceHolderImages.find(p => p.id === 'journey-image-1');
 
@@ -32,8 +33,10 @@ export function JourneySection() {
               Gleam Genie started as a vision to offer more than just cleaning—it's about creating an experience, transforming each home into a serene, luxurious sanctuary. Today, I'm proud to provide a service that delivers quality, elegance, and a touch of Italy in every home we clean.
             </p>
             <div className="pt-4">
-              <Button variant="outline" className="tracking-wide transform transition-transform duration-300 hover:-translate-y-1">
-                Learn More
+              <Button asChild variant="outline" className="tracking-wide transform transition-transform duration-300 hover:-translate-y-1">
+                <Link href="/#contact">
+                  Learn More
+                </Link>
               </Button>
             </div>
           </div>

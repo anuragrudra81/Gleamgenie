@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import { Check } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -28,7 +29,7 @@ export function WhyUsSection() {
     <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
       <div className="container px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <div className="relative h-[400px] md:h-[550px] w-full rounded-md overflow-hidden animate-fade-in">
+          <div className="relative h-[400px] md:h-[550px] w-full rounded-md overflow-hidden animate-fade-in transition-transform duration-300 hover:scale-105">
             {whyUsImage && (
               <Image
                 src={whyUsImage.imageUrl}
@@ -50,7 +51,7 @@ export function WhyUsSection() {
             </div>
             <ul className="grid gap-4">
               {reasons.map((reason, index) => (
-                <li key={reason.title} className="flex items-start gap-4 animate-fade-in-up" style={{ animationDelay: `${index * 100}ms` }}>
+                <li key={reason.title} className="flex items-start gap-4 animate-fade-in-up transition-transform duration-300 hover:scale-105" style={{ animationDelay: `${index * 100}ms` }}>
                   <div className="p-0 mt-1">
                     <Check className="h-5 w-5 text-primary" />
                   </div>
