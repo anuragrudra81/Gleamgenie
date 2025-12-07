@@ -77,7 +77,7 @@ export function SiteHeader() {
   
   const quoteButtonClassName = `transform transition-transform duration-300 hover:-translate-y-1 ${
     headerIsTransparent
-      ? "text-white border-white hover:bg-white hover:text-primary"
+      ? "bg-transparent text-white border-white hover:bg-white hover:text-primary"
       : "text-primary border-primary hover:bg-primary hover:text-white"
   }`;
 
