@@ -10,7 +10,7 @@ export function JourneySection() {
   return (
     <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-background">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-fade-in-up">
           <h2 className="text-4xl font-bold tracking-tight sm:text-5xl text-primary">My Journey</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
