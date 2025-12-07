@@ -27,8 +27,8 @@ import { useState, useEffect } from "react";
 import { GleamGenieLogo } from "./icons";
 
 const serviceLinks = [
-  { href: "/services/home-cleaning", label: "home cleaning" },
-  { href: "/services/office-cleaning", label: "office cleaning" },
+  { href: "/services/home-cleaning", label: "residential cleaning" },
+  { href: "/services/office-cleaning", label: "commercial office cleaning" },
   { href: "/services/construction-cleaning", label: "construction cleaning" },
   { href: "/services/childcare-cleaning", label: "childcare cleaning" },
 ];
@@ -77,16 +77,16 @@ export function SiteHeader() {
   
   const quoteButtonClassName = `transform transition-transform duration-300 hover:-translate-y-1 ${
     headerIsTransparent
-      ? "text-white hover:text-white"
-      : "text-primary hover:text-primary"
+      ? "text-white border-white hover:bg-white hover:text-primary"
+      : "text-primary border-primary hover:bg-primary hover:text-white"
   }`;
 
   return (
     <header
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-        headerIsTransparent
-          ? "bg-transparent"
-          : "border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+        !isHomePage || isScrolled
+          ? "border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+          : "bg-transparent"
       }`}
     >
       <div className="container flex h-16 items-center">
@@ -112,10 +112,10 @@ export function SiteHeader() {
                     <DropdownMenuTrigger className={`flex items-center gap-1 ${linkClassName}`} onMouseEnter={() => setIsServicesMenuOpen(true)}>
                         all services <ChevronDown className="h-4 w-4" />
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent className="bg-transparent border-none shadow-none">
+                    <DropdownMenuContent>
                         {serviceLinks.map((link) => (
                         <DropdownMenuItem key={link.href} asChild>
-                            <Link href={link.href} prefetch={false} className={linkClassName}>
+                            <Link href={link.href} prefetch={false} className="text-muted-foreground hover:text-primary">
                             {link.label}
                             </Link>
                         </DropdownMenuItem>
@@ -139,7 +139,7 @@ export function SiteHeader() {
 
         <div className="hidden md:flex items-center justify-end space-x-2 ml-auto">
             <Button
-                variant="ghost"
+                variant="outline"
                 size="sm"
                 asChild
                 className={quoteButtonClassName}
