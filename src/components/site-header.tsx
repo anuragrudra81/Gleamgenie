@@ -63,14 +63,6 @@ export function SiteHeader() {
       : "text-muted-foreground hover:text-primary"
   }`;
 
-  const iconClassName = `h-7 w-7 ${
-    headerIsTransparent ? "text-white" : "text-primary"
-  }`;
-
-  const brandTextClassName = `font-semibold text-lg tracking-wide inline-block ${
-    headerIsTransparent ? "text-white" : "text-primary"
-  }`;
-  
   const mobileMenuClassName = `${
     headerIsTransparent ? "text-white hover:text-white/80" : "text-primary hover:text-primary/80"
   }`;
@@ -96,13 +88,8 @@ export function SiteHeader() {
           prefetch={false}
         >
           <GleamGenieLogo
-            className={iconClassName}
+            className="h-12 w-auto"
           />
-          <span
-            className={brandTextClassName}
-          >
-            gleam genie
-          </span>
         </Link>
 
         <div className="hidden md:flex flex-1 justify-center">
@@ -164,10 +151,7 @@ export function SiteHeader() {
             </SheetTrigger>
             <SheetContent side="right">
               <Link href="/" className="mr-6 flex items-center space-x-2 mb-8">
-                <GleamGenieLogo className="h-7 w-7 text-primary" />
-                <span className="font-bold text-xl tracking-wider">
-                  gleam genie
-                </span>
+                <GleamGenieLogo className="h-10 w-auto text-primary" />
               </Link>
               <div className="flex flex-col space-y-2">
                 <Accordion type="single" collapsible className="w-full">
