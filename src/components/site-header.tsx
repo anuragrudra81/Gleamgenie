@@ -88,8 +88,9 @@ export function SiteHeader() {
           prefetch={false}
         >
           <GleamGenieLogo
-            className="h-12 w-auto"
+            className="h-12 w-12"
           />
+           <span className="font-semibold text-xl tracking-wide sr-only">gleam genie</span>
         </Link>
 
         <div className="hidden md:flex flex-1 justify-center">
@@ -152,6 +153,7 @@ export function SiteHeader() {
             <SheetContent side="right">
               <Link href="/" className="mr-6 flex items-center space-x-2 mb-8">
                 <GleamGenieLogo className="h-10 w-auto text-primary" />
+                <span className="sr-only">Gleam Genie</span>
               </Link>
               <div className="flex flex-col space-y-2">
                 <Accordion type="single" collapsible className="w-full">
