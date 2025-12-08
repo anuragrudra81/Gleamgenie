@@ -84,7 +84,7 @@ export function SiteHeader() {
       <div className="container flex h-16 items-center">
         <Link
           href="/"
-          className="flex items-center space-x-2 mr-auto md:mr-0"
+          className="flex items-center space-x-2 mr-auto"
           prefetch={false}
         >
           <GleamGenieLogo

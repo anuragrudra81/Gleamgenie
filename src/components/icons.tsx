@@ -5,7 +5,7 @@ export function GleamGenieLogo(props: React.SVGProps<SVGSVGElement>) {
   // This now points to the logo you placed in the public folder.
   return (
     <img 
-      src="/Cleaing.png" 
+      src="/gleamGenieLogo.png" 
       alt="Gleam Genie Logo" 
       {...props} 
     />
