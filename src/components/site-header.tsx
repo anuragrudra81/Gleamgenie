@@ -70,7 +70,7 @@ export function SiteHeader() {
   const quoteButtonClassName = `transform transition-transform duration-300 hover:-translate-y-1 ${
     headerIsTransparent
       ? "bg-transparent text-white border-white hover:bg-white hover:text-primary"
-      : "bg-primary text-primary-foreground border-primary hover:bg-primary/90"
+      : "bg-brand-navy text-white border-brand-navy hover:bg-brand-navy/90"
   }`;
 
   return (
@@ -88,7 +88,7 @@ export function SiteHeader() {
           prefetch={false}
         >
           <GleamGenieLogo
-            className="h-20 w-auto"
+            className="h-12 w-auto"
           />
            <span className="font-semibold text-xl tracking-wide sr-only">gleam genie</span>
         </Link>
