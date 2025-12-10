@@ -208,7 +208,6 @@ export default function ChildcareCleaningPage() {
           </div>
         </div>
       </div>
-      <WhoWeServiceSection />
       <OfficeQuoteForm />
     </>
   );
