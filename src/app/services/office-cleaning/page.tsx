@@ -161,11 +161,6 @@ export default function OfficeCleaningPage() {
             <p className="text-muted-foreground font-light max-w-lg">
               We deliver professional office cleaning to keep your workplace fresh, hygienic, and welcoming, creating a space where your team can be productive and clients feel confident.
             </p>
-            <div className="pt-4">
-              <Button asChild className="tracking-wide transform transition-transform duration-300 hover:-translate-y-1">
-                  <Link href="https://calendly.com/gleamgenie" target="_blank" rel="noopener noreferrer">Get a Quote for Your Office</Link>
-              </Button>
-            </div>
           </div>
         </div>
       </div>
