@@ -67,7 +67,7 @@ export function SiteHeader() {
     headerIsTransparent ? "text-white hover:text-white/80" : "text-primary hover:text-primary/80"
   }`;
   
-  const phoneButtonClassName = `transform transition-transform duration-300 hover:-translate-y-1 ${
+  const phoneButtonClassName = `transform transition-all duration-300 hover:-translate-y-1 ${
     headerIsTransparent
       ? "bg-transparent text-white border-white hover:bg-white hover:text-primary"
       : "bg-primary text-primary-foreground hover:bg-primary/90"
