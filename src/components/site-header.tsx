@@ -67,10 +67,10 @@ export function SiteHeader() {
     headerIsTransparent ? "text-white hover:text-white/80" : "text-primary hover:text-primary/80"
   }`;
   
-  const quoteButtonClassName = `transform transition-transform duration-300 hover:-translate-y-1 ${
+  const phoneButtonClassName = `transform transition-transform duration-300 hover:-translate-y-1 ${
     headerIsTransparent
       ? "bg-transparent text-white border-white hover:bg-white hover:text-primary"
-      : "bg-brand-navy text-white border-brand-navy hover:bg-brand-navy/90"
+      : "bg-primary text-primary-foreground hover:bg-primary/90"
   }`;
 
   return (
@@ -130,7 +130,7 @@ export function SiteHeader() {
                 variant="outline"
                 size="sm"
                 asChild
-                className={quoteButtonClassName}
+                className={phoneButtonClassName}
             >
                 <Link href="tel:0472526148">
                     <Phone className="h-4 w-4" />
