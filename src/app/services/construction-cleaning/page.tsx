@@ -1,4 +1,3 @@
-
 "use client";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -184,11 +183,6 @@ export default function ConstructionCleaningPage() {
                     </ul>
                 </div>
             </div>
-            <div className="pt-4">
-              <Button asChild className="tracking-wide transform transition-transform duration-300 hover:-translate-y-1">
-                  <Link href="#inquiry-form">Send us an Inquiry</Link>
-              </Button>
-            </div>
           </div>
         </div>
       </div>
@@ -196,5 +190,3 @@ export default function ConstructionCleaningPage() {
     </>
   );
 }
-
-    
