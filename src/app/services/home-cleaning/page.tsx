@@ -34,7 +34,7 @@ export default function HomeCleaningPage() {
             </p>
             <div className="pt-4">
               <Button asChild className="tracking-wide transform transition-transform duration-300 hover:-translate-y-1">
-                  <Link href="https://calendly.com/gleamgenie" target="_blank" rel="noopener noreferrer">Get a Quote</Link>
+                  <Link href="/#quote-form">Get a Quote</Link>
               </Button>
             </div>
           </div>
