@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Link from "next/link";
-import { PricingSection } from "@/components/pricing-section";
 
 const serviceImage = PlaceHolderImages.find(p => p.id === 'service-office-cleaning');
 
@@ -36,7 +35,6 @@ export default function OfficeCleaningPage() {
           </div>
         </div>
       </div>
-      <PricingSection />
     </>
   );
 }
