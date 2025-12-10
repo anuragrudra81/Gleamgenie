@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { SparkleIcon } from "./icons";
+import { Gem } from "lucide-react";
 
 const packages = [
   {
@@ -63,7 +63,7 @@ export function PricingSection() {
         <div className="mx-auto grid items-start gap-8 sm:max-w-4xl grid-cols-1 md:gap-12 lg:max-w-5xl lg:grid-cols-3 pt-12">
           {packages.map((pkg, index) => (
             <div key={pkg.title} className="flex flex-col items-center text-center p-6 h-full">
-              <SparkleIcon className={`h-10 w-10 mb-4 ${index === 1 ? 'text-gray-400' : 'text-yellow-500'}`} />
+              <Gem className={`h-10 w-10 mb-4 ${index === 1 ? 'text-gray-400' : 'text-yellow-500'}`} />
               <h3 className="font-semibold text-xl mb-4">What's Included?</h3>
               <ul className="grid gap-3 flex-grow text-left">
                 {pkg.features.map((feature) => (
