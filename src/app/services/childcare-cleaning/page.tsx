@@ -171,11 +171,6 @@ export default function ChildcareCleaningPage() {
                 Let us handle the mess. You focus on the kids.
               </p>
             </div>
-            <div className="pt-4">
-              <Button asChild className="tracking-wide transform transition-transform duration-300 hover:-translate-y-1">
-                  <Link href="#inquiry-form">Send an Inquiry</Link>
-              </Button>
-            </div>
           </div>
         </div>
       </div>
