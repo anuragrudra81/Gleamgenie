@@ -70,7 +70,7 @@ export function SiteHeader() {
   const phoneButtonClassName = `transform transition-all duration-300 hover:-translate-y-1 ${
     headerIsTransparent
       ? "bg-transparent text-white border-white hover:bg-white hover:text-primary"
-      : "bg-primary text-primary-foreground hover:bg-primary/90"
+      : "bg-background text-primary border-primary hover:bg-primary hover:text-primary-foreground"
   }`;
 
   return (
