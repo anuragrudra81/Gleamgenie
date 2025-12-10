@@ -25,7 +25,7 @@ export function HeroSection() {
           your space, spotlessly clean.
         </h1>
         <p className="mt-6 text-lg font-light max-w-3xl mx-auto text-white/90">
-          gleam genie provides premium residential and commercial cleaning services in bayside melbourne. experience the gold standard of luxury cleaning.
+          Premium Residential & Commercial Cleaning Services in Bayside Melbourne
         </p>
         <div className="mt-8 flex justify-center">
           <Button 
