@@ -156,30 +156,6 @@ function OfficeQuoteForm() {
     )
 }
 
-function WhoWeServiceSection() {
-    return (
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
-            <div className="container px-4 md:px-6">
-                <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-primary">
-                        Who We Service
-                    </h2>
-                </div>
-                <div className="max-w-4xl mx-auto">
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
-                        {whoWeServiceItems.map((item) => (
-                            <li key={item} className="flex items-start gap-3">
-                                <Check className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                                <span className="text-muted-foreground">{item}</span>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
-        </section>
-    );
-}
-
 export default function OfficeCleaningPage() {
   return (
     <>
@@ -204,7 +180,6 @@ export default function OfficeCleaningPage() {
           </div>
         </div>
       </div>
-      <WhoWeServiceSection />
       <OfficeQuoteForm />
     </>
   );

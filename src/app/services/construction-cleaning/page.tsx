@@ -29,21 +29,6 @@ const officeQuoteFormSchema = z.object({
   company: z.string().min(1, 'Company is required'),
 });
 
-const whoWeServiceItems = [
-    "Corporate",
-    "Large Offices",
-    "Business Centres",
-    "Property Cleaning & Management",
-    "Car Park Cleaning",
-    "Apartment Cleaning",
-    "Office Cleaning Services",
-    "Commercial Building",
-    "Commercial & Retail",
-    "Large Retail Stores",
-    "Luxury Car Dealerships and showroom",
-    "Cleaning of Shopping Complexes"
-];
-
 const constructionServices = [
     "Pre-build cleans",
     "Final cleans",
@@ -165,30 +150,6 @@ function OfficeQuoteForm() {
     )
 }
 
-function WhoWeServiceSection() {
-    return (
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
-            <div className="container px-4 md:px-6">
-                <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-primary">
-                        Who We Service
-                    </h2>
-                </div>
-                <div className="max-w-4xl mx-auto">
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
-                        {whoWeServiceItems.map((item) => (
-                            <li key={item} className="flex items-start gap-3">
-                                <Check className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                                <span className="text-muted-foreground">{item}</span>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
-        </section>
-    );
-}
-
 export default function ConstructionCleaningPage() {
   return (
     <>
@@ -231,7 +192,6 @@ export default function ConstructionCleaningPage() {
           </div>
         </div>
       </div>
-      <WhoWeServiceSection />
       <OfficeQuoteForm />
     </>
   );
