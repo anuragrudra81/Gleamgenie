@@ -12,7 +12,7 @@ const services = [
   },
   {
     icon: <Building2 className="h-8 w-8 text-primary" />,
-    title: "commercial office cleaning",
+    title: "commercial cleaning",
     description: "We deliver professional office cleaning to keep your workplace fresh, hygienic, and welcoming, creating a space where your team can be productive and clients feel confident.",
     href: "/services/office-cleaning",
   },

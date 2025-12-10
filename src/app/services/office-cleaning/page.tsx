@@ -197,7 +197,7 @@ export default function OfficeCleaningPage() {
             )}
           </div>
           <div className="flex flex-col justify-center space-y-6 animate-fade-in-up text-left">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-primary">Office Cleaning</h1>
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-primary">Commercial Cleaning</h1>
             <p className="text-muted-foreground font-light max-w-lg">
               We deliver professional office cleaning to keep your workplace fresh, hygienic, and welcoming, creating a space where your team can be productive and clients feel confident.
             </p>
