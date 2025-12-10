@@ -72,7 +72,7 @@ function OfficeQuoteForm() {
         }
     }
     return (
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-brand-navy text-white">
+        <section id="inquiry-form" className="w-full py-12 md:py-24 lg:py-32 bg-brand-navy text-white">
             <div className="container px-4 md:px-6">
                  <h2 className="text-3xl font-bold tracking-tight text-center sm:text-4xl text-white mb-8">
                     send us an inquiry
@@ -173,7 +173,7 @@ export default function ChildcareCleaningPage() {
             </div>
             <div className="pt-4">
               <Button asChild className="tracking-wide transform transition-transform duration-300 hover:-translate-y-1">
-                  <Link href="https://calendly.com/gleamgenie" target="_blank" rel="noopener noreferrer">Get a Quote for Your Center</Link>
+                  <Link href="#inquiry-form">Send an Inquiry</Link>
               </Button>
             </div>
           </div>
