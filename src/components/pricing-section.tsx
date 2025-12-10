@@ -15,6 +15,7 @@ const packages = [
     buttonLabel: "Get a Quote",
     buttonLink: "https://calendly.com/gleamgenie",
     variant: 'default' as const,
+    iconColor: 'text-amber-700',
   },
   {
     title: "silver package",
@@ -27,6 +28,7 @@ const packages = [
     buttonLabel: "Get a Quote",
     buttonLink: "https://calendly.com/gleamgenie",
     variant: 'outline' as const,
+    iconColor: 'text-gray-400',
   },
   {
     title: "gold package",
@@ -45,6 +47,7 @@ const packages = [
     buttonLabel: "Get a Quote",
     buttonLink: "https://calendly.com/gleamgenie",
     variant: 'default' as const,
+    iconColor: 'text-yellow-500',
   },
 ];
 
@@ -61,9 +64,9 @@ export function PricingSection() {
           </div>
         </div>
         <div className="mx-auto grid items-start gap-8 sm:max-w-4xl grid-cols-1 md:gap-12 lg:max-w-5xl lg:grid-cols-3 pt-12">
-          {packages.map((pkg, index) => (
+          {packages.map((pkg) => (
             <div key={pkg.title} className="flex flex-col items-center text-center p-6 h-full">
-              <GenieLampIcon className={`h-10 w-10 mb-4 ${index === 1 ? 'text-gray-400' : 'text-yellow-500'}`} />
+              <GenieLampIcon className={`h-10 w-10 mb-4 ${pkg.iconColor}`} />
               <h3 className="font-semibold text-xl mb-4">What's Included?</h3>
               <ul className="grid gap-3 flex-grow text-left">
                 {pkg.features.map((feature) => (
