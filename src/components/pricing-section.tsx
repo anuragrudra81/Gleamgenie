@@ -34,12 +34,12 @@ const packages = [
     title: "gold package",
     features: [
       "Linen Changing $12/bed",
-      "Wash, Dry, Fold $45/load",
+      "Wash, Dry, Fold $55/load",
       "Ironing $40/30mins",
       "Wash dishes $40/30 mins",
-      "Oven Clean $75",
+      "Oven Clean $85",
       "Microwave clean $25",
-      "Fridge Clean $35",
+      "Fridge Clean $55",
       "Clean Induction Fan $50-100",
       "Inside Windows $65-120",
       "Garage/Patio $30",
@@ -66,7 +66,7 @@ export function PricingSection() {
         <div className="mx-auto grid items-start gap-8 sm:max-w-4xl grid-cols-1 md:gap-12 lg:max-w-5xl lg:grid-cols-3 pt-12">
           {packages.map((pkg) => (
             <div key={pkg.title} className="flex flex-col items-center text-center p-6 h-full">
-              <SparkleIcon className={`h-10 w-10 mb-4 ${pkg.iconColor}`} />
+              <SparkleIcon className={`h-12 w-12 mb-4 ${pkg.iconColor}`} />
               <h3 className="font-semibold text-xl mb-4">What's Included?</h3>
               <ul className="grid gap-3 flex-grow text-left">
                 {pkg.features.map((feature) => (
