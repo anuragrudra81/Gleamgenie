@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Link from "next/link";
 import { PricingSection } from "@/components/pricing-section";
-import { Check } from "lucide-react";
+import { QuoteForm } from "@/components/quote-form";
 
 const serviceImage = PlaceHolderImages.find(p => p.id === 'service-home-cleaning');
 
@@ -34,12 +34,13 @@ export default function HomeCleaningPage() {
             </p>
             <div className="pt-4">
               <Button asChild className="tracking-wide transform transition-transform duration-300 hover:-translate-y-1">
-                  <Link href="/#quote-form">Get a Quote</Link>
+                  <Link href="#quote-form">Get a Quote</Link>
               </Button>
             </div>
           </div>
         </div>
       </div>
+      <QuoteForm />
       <PricingSection />
     </>
   );
