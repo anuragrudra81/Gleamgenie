@@ -9,10 +9,6 @@ const reasons = [
     description: "our cleaners are vetted, trained, and insured for your peace of mind.",
   },
   {
-    title: "eco-friendly products",
-    description: "we use safe, sustainable products for a healthy home and a happy planet.",
-  },
-  {
     title: "satisfaction guaranteed",
     description: "we're not happy unless you are. we'll re-clean any area you're not satisfied with.",
   },
