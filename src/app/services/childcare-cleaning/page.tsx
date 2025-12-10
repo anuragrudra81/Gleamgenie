@@ -162,7 +162,7 @@ export default function ChildcareCleaningPage() {
                 Childcare centres are full of energy, and full of germs. With so many little ones running around, keeping things clean isn’t optional, it’s essential.
               </p>
               <p>
-                At Gleam Genie, we make it easy. We specialise in childcare cleaning across Australia, keeping your spaces fresh, hygienic, and safe for the kids, staff, and families who rely on you every day.
+                At Gleam Genie, we make it easy. We specialise in childcare cleaning across Melbourne, keeping your spaces fresh, hygienic, and safe for the kids, staff, and families who rely on you every day.
               </p>
               <p>
                 A clean centre builds trust, boosts your reputation, and creates a better environment for learning and play. And with Gleam Genie, you get consistent, high quality cleaning that helps your centre shine, every single day.
