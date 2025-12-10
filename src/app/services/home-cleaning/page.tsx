@@ -1,14 +1,26 @@
 
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import Link from "next/link";
 import { PricingSection } from "@/components/pricing-section";
 import { QuoteForm } from "@/components/quote-form";
 
 const serviceImage = PlaceHolderImages.find(p => p.id === 'service-home-cleaning');
 
 export default function HomeCleaningPage() {
+  const [showForm, setShowForm] = useState(false);
+
+  const handleGetQuoteClick = () => {
+    setShowForm(true);
+    // Use a timeout to ensure the form is rendered before scrolling
+    setTimeout(() => {
+      document.getElementById("quote-form")?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <>
       <div className="container mx-auto px-4 py-16 pt-32 sm:pt-48">
@@ -33,14 +45,14 @@ export default function HomeCleaningPage() {
               Click the "Get a Quote" button below and get an instant quote. Don't wait any longer to experience the luxury of a spotless home!
             </p>
             <div className="pt-4">
-              <Button asChild className="tracking-wide transform transition-transform duration-300 hover:-translate-y-1">
-                  <Link href="#quote-form">Get a Quote</Link>
+              <Button onClick={handleGetQuoteClick} className="tracking-wide transform transition-transform duration-300 hover:-translate-y-1">
+                  Get a Quote
               </Button>
             </div>
           </div>
         </div>
       </div>
-      <QuoteForm />
+      {showForm && <QuoteForm />}
       <PricingSection />
     </>
   );
