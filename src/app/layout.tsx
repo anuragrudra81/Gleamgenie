@@ -4,7 +4,6 @@ import './globals.css';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 import { Toaster } from '@/components/ui/toaster';
-import { SocialLinks } from '@/components/social-links';
 import { WhatsAppButton } from '@/components/whatsapp-button';
 
 export const metadata: Metadata = {
@@ -30,7 +29,6 @@ export default function RootLayout({
           {children}
         </main>
         <SiteFooter />
-        <SocialLinks />
         <WhatsAppButton />
         <Toaster />
       </body>

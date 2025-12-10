@@ -9,6 +9,11 @@ const contactDetails = [
     { label: "ABN", value: "41600925978" },
 ];
 
+const socialLinks = [
+  { href: "https://instagram.com", label: "Instagram" },
+  { href: "https://facebook.com", label: "Facebook" },
+];
+
 export function SiteFooter() {
   return (
     <footer className="bg-secondary text-secondary-foreground py-8">
@@ -42,6 +47,17 @@ export function SiteFooter() {
             <div className="flex gap-4">
                 <Link href="/terms" className="hover:text-primary transition-colors">Terms & Conditions</Link>
                 <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+                 {socialLinks.map((social) => (
+                    <Link
+                    key={social.href}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors"
+                    >
+                    {social.label}
+                    </Link>
+                ))}
             </div>
         </div>
       </div>
