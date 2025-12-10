@@ -25,6 +25,8 @@ import {
 import { Menu, ChevronDown, Phone } from "lucide-react";
 import { useState, useEffect } from "react";
 import { GleamGenieLogo } from "./icons";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
 
 const serviceLinks = [
   { href: "/services/home-cleaning", label: "residential cleaning" },
@@ -57,8 +59,29 @@ export function SiteHeader() {
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  
+  if (!mounted) {
+    return (
+        <header
+          className={'fixed top-0 z-50 w-full bg-transparent'}
+        >
+        <div className="container flex h-16 items-center">
+            <Link
+            href="/"
+            className="flex items-center space-x-2 mr-auto"
+            prefetch={false}
+            >
+            <GleamGenieLogo
+                className="h-12 w-auto"
+            />
+            <span className="font-semibold text-xl tracking-wide sr-only">gleam genie</span>
+            </Link>
+        </div>
+      </header>
+    );
+  }
 
-  const headerIsTransparent = mounted && isHomePage && !isScrolled;
+  const headerIsTransparent = isHomePage && !isScrolled;
 
   const linkClassName = `transition-colors ${
     headerIsTransparent
@@ -123,17 +146,13 @@ export function SiteHeader() {
         </div>
 
         <div className="hidden md:flex items-center justify-end space-x-2 ml-auto">
-            <Button
-                variant="outline"
-                size="sm"
-                asChild
-                className="bg-primary text-primary-foreground hover:bg-primary/90 transform transition-all duration-300 hover:-translate-y-1"
-            >
-                <Link href="tel:0472526148">
-                    <Phone className="h-4 w-4" />
-                    0472 526 148
-                </Link>
-            </Button>
+             <Link
+                href="tel:0472526148"
+                className={cn(buttonVariants({ variant: 'default', size: 'sm' }), "transform transition-all duration-300 hover:-translate-y-1")}
+              >
+                <Phone className="h-4 w-4" />
+                0472 526 148
+              </Link>
         </div>
 
         <div className="flex items-center justify-end space-x-2 md:hidden ml-auto">
