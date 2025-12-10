@@ -66,13 +66,13 @@ export function PricingSection() {
         </div>
         <div className="mx-auto grid items-start gap-8 sm:max-w-4xl grid-cols-1 md:gap-12 lg:max-w-5xl lg:grid-cols-3 pt-12">
           {packages.map((pkg, index) => (
-            <Card key={pkg.title} className="h-full flex flex-col bg-transparent border-0 shadow-none text-center">
+            <Card key={pkg.title} className="h-full flex flex-col bg-card border shadow-sm text-center">
               <CardHeader className="items-center">
-                <SparkleIcon className={`h-10 w-10 mb-4 ${index === 1 ? 'text-gray-300' : 'text-yellow-500'}`} />
+                <SparkleIcon className={`h-10 w-10 mb-4 ${index === 1 ? 'text-gray-400' : 'text-yellow-500'}`} />
                 <CardTitle className="uppercase tracking-wider">{pkg.title}</CardTitle>
-                <CardDescription className="font-light text-sm">{pkg.description}</CardDescription>
+                <CardDescription className="font-light text-sm h-24">{pkg.description}</CardDescription>
               </CardHeader>
-              <CardContent className="flex flex-col flex-grow items-center">
+              <CardContent className="flex flex-col flex-grow items-center p-6">
                  <h4 className="font-semibold mb-4">What's Included?</h4>
                 <ul className="grid gap-3 flex-grow text-left">
                   {pkg.features.map((feature) => (
