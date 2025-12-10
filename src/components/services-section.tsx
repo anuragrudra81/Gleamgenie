@@ -19,13 +19,13 @@ const services = [
   {
     icon: <Construction className="h-8 w-8 text-primary" />,
     title: "construction cleaning",
-    description: "a thorough, top-to-bottom clean for when your space needs extra attention.",
+    description: "Our post-construction service delivers a thorough, top-to-bottom clean, transforming your new build into a pristine, move-in ready space.",
     href: "/services/construction-cleaning",
   },
    {
     icon: <Baby className="h-8 w-8 text-primary" />,
     title: "childcare cleaning",
-    description: "specialized cleaning for childcare centers, ensuring a safe and hygienic environment for children.",
+    description: "We provide specialized cleaning for childcare centers, ensuring a safe, hygienic, and welcoming environment for children and staff.",
     href: "/services/childcare-cleaning",
   },
 ];
