@@ -33,7 +33,7 @@ export function HeroSection() {
             variant="outline"
             asChild
             className="w-full sm:w-auto tracking-wide transform transition-transform duration-300 hover:-translate-y-1 bg-transparent border-white text-white hover:bg-white hover:text-primary">
-            <Link href="/services/home-cleaning#quote-form">
+            <Link href="https://calendly.com/gleamgenie" target="_blank" rel="noopener noreferrer">
                 INSTANT QUOTE
             </Link>
           </Button>
