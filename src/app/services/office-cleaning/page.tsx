@@ -26,7 +26,7 @@ export default function OfficeCleaningPage() {
           <div className="flex flex-col justify-center space-y-6 animate-fade-in-up text-left">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-primary">Office Cleaning</h1>
             <p className="text-muted-foreground font-light max-w-lg">
-              A clean and organized office environment is crucial for productivity and employee well-being. Our professional office cleaning service ensures your workspace is always immaculate. We cover everything from individual workstations and common areas to restrooms and kitchens, using eco-friendly products to create a healthy and inviting atmosphere.
+              We deliver professional office cleaning to keep your workplace fresh, hygienic, and welcoming, creating a space where your team can be productive and clients feel confident.
             </p>
             <div className="pt-4">
               <Button asChild className="tracking-wide transform transition-transform duration-300 hover:-translate-y-1">
