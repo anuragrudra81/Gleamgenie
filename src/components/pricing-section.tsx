@@ -1,13 +1,12 @@
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import { SparkleIcon } from "./icons";
 
 const packages = [
   {
     title: "bronze package",
-    description: "A light refresh to keep your home tidy. Perfect for regular upkeep. The Bronze Package covers all the essential tasks to keep your space fresh, tidy, and guest ready.",
     features: [
       "Vacuuming and mopping all floors",
       "Wipe down all surfaces, countertops (including shower screens & baths)",
@@ -20,7 +19,6 @@ const packages = [
   },
   {
     title: "silver package",
-    description: "Upgrade anytime to the Silver Package for a more detailed clean. Perfect for homes needing that little extra attention on top of the basics.",
     features: [
       "Dust skirting boards and light fixtures",
       "Thoroughly wipe down all cupboards and appliances",
@@ -33,7 +31,6 @@ const packages = [
   },
   {
     title: "gold package",
-    description: "Customize your clean with our Gold add-ons options, available for both one-off services and ongoing regular cleans. Tailor the service to your specific needs, whether it’s a deep clean, appliance detailing, or extra organizing.",
     features: [
       "Linen Changing $12/bed",
       "Wash, Dry, Fold $45/load",
@@ -66,18 +63,16 @@ export function PricingSection() {
         </div>
         <div className="mx-auto grid items-start gap-8 sm:max-w-4xl grid-cols-1 md:gap-12 lg:max-w-5xl lg:grid-cols-3 pt-12">
           {packages.map((pkg, index) => (
-            <Card key={pkg.title} className="h-full flex flex-col bg-card border shadow-sm text-center">
+            <Card key={pkg.title} className="h-full flex flex-col bg-transparent border-0 shadow-none text-center">
               <CardHeader className="items-center">
                 <SparkleIcon className={`h-10 w-10 mb-4 ${index === 1 ? 'text-gray-400' : 'text-yellow-500'}`} />
-                <CardTitle className="uppercase tracking-wider">{pkg.title}</CardTitle>
-                <CardDescription className="font-light text-sm h-24">{pkg.description}</CardDescription>
+                <CardTitle className="font-semibold text-xl">What's Included?</CardTitle>
               </CardHeader>
               <CardContent className="flex flex-col flex-grow items-center p-6">
-                 <h4 className="font-semibold mb-4">What's Included?</h4>
                 <ul className="grid gap-3 flex-grow text-left">
                   {pkg.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
-                      <span className="text-yellow-500 mt-1">&bull;</span>
+                      <span className="text-primary mt-1">&bull;</span>
                       <span className="text-muted-foreground font-light text-sm">{feature}</span>
                     </li>
                   ))}
