@@ -1,10 +1,144 @@
 
+"use client";
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Link from "next/link";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
 
 const serviceImage = PlaceHolderImages.find(p => p.id === 'service-office-cleaning');
+
+const officeQuoteFormSchema = z.object({
+  name: z.string().min(1, 'Name is required'),
+  email: z.string().email('Invalid email address'),
+  phone: z.string().min(1, 'Phone is required'),
+  company: z.string().min(1, 'Company is required'),
+});
+
+function OfficeQuoteForm() {
+    const { toast } = useToast();
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const form = useForm<z.infer<typeof officeQuoteFormSchema>>({
+        resolver: zodResolver(officeQuoteFormSchema),
+        defaultValues: {
+            name: "",
+            email: "",
+            phone: "",
+            company: ""
+        },
+    });
+
+    async function onSubmit(values: z.infer<typeof officeQuoteFormSchema>) {
+        setIsSubmitting(true);
+        try {
+            const response = await fetch('/api/email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(values),
+            });
+
+            if (!response.ok) {
+                throw new Error('Something went wrong.');
+            }
+
+            toast({
+                title: "Quote request sent!",
+                description: "Thanks! We'll get back to you with a quote shortly.",
+            });
+            form.reset();
+        } catch (error) {
+            toast({
+                variant: "destructive",
+                title: "Uh oh! Something went wrong.",
+                description: "There was a problem sending your request. Please try again.",
+            });
+        } finally {
+            setIsSubmitting(false);
+        }
+    }
+    return (
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-brand-navy text-white">
+            <div className="container px-4 md:px-6">
+                 <h2 className="text-3xl font-bold tracking-tight text-center sm:text-4xl text-white mb-8">
+                    Book now free quote
+                </h2>
+                <Form {...form}>
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="max-w-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                         <FormField
+                            control={form.control}
+                            name="name"
+                            render={({ field }) => (
+                                <FormItem>
+                                <FormControl>
+                                    <Input placeholder="Your Name:" {...field} className="bg-white text-foreground" />
+                                </FormControl>
+                                <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                        <FormField
+                            control={form.control}
+                            name="phone"
+                            render={({ field }) => (
+                                <FormItem>
+                                <FormControl>
+                                    <Input placeholder="Phone:" {...field} className="bg-white text-foreground" />
+                                </FormControl>
+                                <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                        <FormField
+                            control={form.control}
+                            name="company"
+                            render={({ field }) => (
+                                <FormItem>
+                                <FormControl>
+                                    <Input placeholder="Company:" {...field} className="bg-white text-foreground" />
+                                </FormControl>
+                                <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                        <FormField
+                            control={form.control}
+                            name="email"
+                            render={({ field }) => (
+                                <FormItem>
+                                <FormControl>
+                                    <Input placeholder="Email:" {...field} className="bg-white text-foreground" />
+                                </FormControl>
+                                <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                       <div className="md:col-span-2 flex justify-center">
+                         <Button type="submit" disabled={isSubmitting} size="lg" className="bg-white/80 text-brand-navy hover:bg-white w-full max-w-xs">
+                           {isSubmitting ? "Sending..." : "Get a quote"}
+                         </Button>
+                       </div>
+                    </form>
+                </Form>
+            </div>
+        </section>
+    )
+}
 
 export default function OfficeCleaningPage() {
   return (
@@ -35,6 +169,7 @@ export default function OfficeCleaningPage() {
           </div>
         </div>
       </div>
+      <OfficeQuoteForm />
     </>
   );
 }

@@ -34,6 +34,13 @@ const quoteFormSchema = z.object({
   postcode: z.string(),
 });
 
+const officeQuoteFormSchema = z.object({
+    name: z.string().min(1, 'Name is required'),
+    email: z.string().email('Invalid email address'),
+    phone: z.string().min(1, 'Phone is required'),
+    company: z.string().min(1, 'Company is required'),
+});
+
 function formatDataAsHtml(data: Record<string, any>) {
   let html = '<div style="font-family: Arial, sans-serif; line-height: 1.6;">';
   for (const [key, value] of Object.entries(data)) {
@@ -74,6 +81,28 @@ export async function POST(req: NextRequest) {
 
       return NextResponse.json({ message: 'Quote request sent successfully!' });
     }
+
+     // Try parsing as an office quote form
+    const officeQuoteParsed = officeQuoteFormSchema.safeParse(body);
+    if (officeQuoteParsed.success) {
+      const { data, error } = await resend.emails.send({
+        from: 'Gleam Genie <onboarding@resend.dev>',
+        to: ['anuragrudra91@gmail.com'],
+        subject: 'New Office Cleaning Quote Request from Gleam Genie',
+        html: `
+          <h1>New Office Cleaning Quote Request</h1>
+          ${formatDataAsHtml(officeQuoteParsed.data)}
+        `,
+      });
+
+      if (error) {
+        console.error('Resend error (Office Quote):', error);
+        return NextResponse.json({ error: 'Failed to send office quote request.' }, { status: 500 });
+      }
+
+      return NextResponse.json({ message: 'Office quote request sent successfully!' });
+    }
+
 
     // Fallback to parsing as a contact form
     const contactParsed = contactFormSchema.safeParse(body);
