@@ -7,7 +7,7 @@ const services = [
   {
     icon: <Home className="h-8 w-8 text-primary" />,
     title: "residential cleaning",
-    description: "regular cleaning to keep your home fresh and tidy. customizable schedules available.",
+    description: "We provide reliable home cleaning, thorough spring cleans, and detailed end of lease and vacate cleaning to make moving or refreshing your home simple and stress-free.",
     href: "/services/home-cleaning",
   },
   {
