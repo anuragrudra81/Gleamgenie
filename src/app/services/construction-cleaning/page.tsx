@@ -225,7 +225,7 @@ export default function ConstructionCleaningPage() {
             </div>
             <div className="pt-4">
               <Button asChild className="tracking-wide transform transition-transform duration-300 hover:-translate-y-1">
-                  <Link href="#inquiry-form">Schedule a Construction Clean</Link>
+                  <Link href="#inquiry-form">Send us an Inquiry</Link>
               </Button>
             </div>
           </div>
