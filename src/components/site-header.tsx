@@ -132,8 +132,8 @@ export function SiteHeader() {
                 asChild
                 className={quoteButtonClassName}
             >
-                <Link href="https://calendly.com/gleamgenie" target="_blank" rel="noopener noreferrer">
-                    INSTANT QUOTE
+                <Link href="tel:0472526148">
+                    0472 526 148
                 </Link>
             </Button>
         </div>
