@@ -1,6 +1,5 @@
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import { SparkleIcon } from "./icons";
 
@@ -63,27 +62,23 @@ export function PricingSection() {
         </div>
         <div className="mx-auto grid items-start gap-8 sm:max-w-4xl grid-cols-1 md:gap-12 lg:max-w-5xl lg:grid-cols-3 pt-12">
           {packages.map((pkg, index) => (
-            <Card key={pkg.title} className="h-full flex flex-col bg-transparent border-0 shadow-none text-center">
-              <CardHeader className="items-center">
-                <SparkleIcon className={`h-10 w-10 mb-4 ${index === 1 ? 'text-gray-400' : 'text-yellow-500'}`} />
-                <CardTitle className="font-semibold text-xl">What's Included?</CardTitle>
-              </CardHeader>
-              <CardContent className="flex flex-col flex-grow items-center p-6">
-                <ul className="grid gap-3 flex-grow text-left">
-                  {pkg.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-3">
-                      <span className="text-primary mt-1">&bull;</span>
-                      <span className="text-muted-foreground font-light text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Button asChild className="mt-8 tracking-wide transform transition-transform duration-300 hover:-translate-y-1 w-full" variant={pkg.variant}>
-                  <Link href={pkg.buttonLink} target="_blank" rel="noopener noreferrer">
-                    {pkg.buttonLabel}
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
+            <div key={pkg.title} className="flex flex-col items-center text-center p-6 h-full">
+              <SparkleIcon className={`h-10 w-10 mb-4 ${index === 1 ? 'text-gray-400' : 'text-yellow-500'}`} />
+              <h3 className="font-semibold text-xl mb-4">What's Included?</h3>
+              <ul className="grid gap-3 flex-grow text-left">
+                {pkg.features.map((feature) => (
+                  <li key={feature} className="flex items-start gap-3">
+                    <span className="text-primary mt-1">&bull;</span>
+                    <span className="text-muted-foreground font-light text-sm">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button asChild className="mt-8 tracking-wide transform transition-transform duration-300 hover:-translate-y-1 w-full" variant={pkg.variant}>
+                <Link href={pkg.buttonLink} target="_blank" rel="noopener noreferrer">
+                  {pkg.buttonLabel}
+                </Link>
+              </Button>
+            </div>
           ))}
         </div>
       </div>
