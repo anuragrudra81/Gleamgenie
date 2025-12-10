@@ -44,18 +44,21 @@ export function SiteHeader() {
   const [isSheetOpen, setSheetOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isServicesMenuOpen, setIsServicesMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === '/';
 
   useEffect(() => {
+    setMounted(true);
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const headerIsTransparent = isHomePage && !isScrolled;
+  const headerIsTransparent = mounted && isHomePage && !isScrolled;
 
   const linkClassName = `transition-colors ${
     headerIsTransparent
@@ -76,7 +79,7 @@ export function SiteHeader() {
   return (
     <header
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-        !isHomePage || isScrolled
+        !headerIsTransparent
           ? "border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
           : "bg-transparent"
       }`}
@@ -130,7 +133,7 @@ export function SiteHeader() {
                 variant="outline"
                 size="sm"
                 asChild
-                className={phoneButtonClassName}
+                className="bg-primary text-primary-foreground hover:bg-primary/90 transform transition-all duration-300 hover:-translate-y-1"
             >
                 <Link href="tel:0472526148">
                     <Phone className="h-4 w-4" />
