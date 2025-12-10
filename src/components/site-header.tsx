@@ -22,7 +22,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Menu, ChevronDown } from "lucide-react";
+import { Menu, ChevronDown, Phone } from "lucide-react";
 import { useState, useEffect } from "react";
 import { GleamGenieLogo } from "./icons";
 
@@ -88,7 +88,7 @@ export function SiteHeader() {
           prefetch={false}
         >
           <GleamGenieLogo
-            className="h-12 w-auto"
+            className="h-20 w-auto"
           />
            <span className="font-semibold text-xl tracking-wide sr-only">gleam genie</span>
         </Link>
@@ -133,6 +133,7 @@ export function SiteHeader() {
                 className={quoteButtonClassName}
             >
                 <Link href="tel:0472526148">
+                    <Phone className="h-4 w-4" />
                     0472 526 148
                 </Link>
             </Button>
