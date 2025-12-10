@@ -17,7 +17,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
-import { Check } from "lucide-react";
 
 
 const serviceImage = PlaceHolderImages.find(p => p.id === 'service-office-cleaning');
@@ -28,21 +27,6 @@ const officeQuoteFormSchema = z.object({
   phone: z.string().min(1, 'Phone is required'),
   company: z.string().min(1, 'Company is required'),
 });
-
-const whoWeServiceItems = [
-    "Corporate",
-    "Large Offices",
-    "Business Centres",
-    "Property Cleaning & Management",
-    "Car Park Cleaning",
-    "Apartment Cleaning",
-    "Office Cleaning Services",
-    "Commercial Building",
-    "Commercial & Retail",
-    "Large Retail Stores",
-    "Luxury Car Dealerships and showroom",
-    "Cleaning of Shopping Complexes"
-];
 
 function OfficeQuoteForm() {
     const { toast } = useToast();
@@ -155,30 +139,6 @@ function OfficeQuoteForm() {
     )
 }
 
-function WhoWeServiceSection() {
-    return (
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
-            <div className="container px-4 md:px-6">
-                <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-primary">
-                        Who We Service
-                    </h2>
-                </div>
-                <div className="max-w-4xl mx-auto">
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
-                        {whoWeServiceItems.map((item) => (
-                            <li key={item} className="flex items-start gap-3">
-                                <Check className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                                <span className="text-muted-foreground">{item}</span>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
-        </section>
-    );
-}
-
 export default function ChildcareCleaningPage() {
   return (
     <>
@@ -197,9 +157,20 @@ export default function ChildcareCleaningPage() {
           </div>
           <div className="flex flex-col justify-center space-y-6 animate-fade-in-up text-left">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-primary">Childcare Cleaning</h1>
-            <p className="text-muted-foreground font-light max-w-lg">
-              We provide specialized cleaning for childcare centers, ensuring a safe, hygienic, and welcoming environment for children and staff.
-            </p>
+            <div className="text-muted-foreground font-light max-w-lg space-y-4">
+              <p>
+                Childcare centres are full of energy, and full of germs. With so many little ones running around, keeping things clean isn’t optional, it’s essential.
+              </p>
+              <p>
+                At Gleam Genie, we make it easy. We specialise in childcare cleaning across Australia, keeping your spaces fresh, hygienic, and safe for the kids, staff, and families who rely on you every day.
+              </p>
+              <p>
+                A clean centre builds trust, boosts your reputation, and creates a better environment for learning and play. And with Gleam Genie, you get consistent, high quality cleaning that helps your centre shine, every single day.
+              </p>
+              <p>
+                Let us handle the mess. You focus on the kids.
+              </p>
+            </div>
             <div className="pt-4">
               <Button asChild className="tracking-wide transform transition-transform duration-300 hover:-translate-y-1">
                   <Link href="https://calendly.com/gleamgenie" target="_blank" rel="noopener noreferrer">Get a Quote for Your Center</Link>
