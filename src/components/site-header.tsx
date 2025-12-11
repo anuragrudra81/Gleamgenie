@@ -172,41 +172,52 @@ export function SiteHeader() {
                 <GleamGenieLogo className="h-10 w-auto text-primary" />
                 <span className="sr-only">Gleam Genie</span>
               </Link>
-              <div className="flex flex-col space-y-2">
-                <Accordion type="single" collapsible className="w-full">
-                  <AccordionItem value="services" className="border-b-0">
-                    <AccordionTrigger className="text-lg transition-colors hover:text-primary tracking-widest py-2 hover:no-underline">
-                      all services
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <div className="flex flex-col space-y-2 pl-4">
-                        {serviceLinks.map((link) => (
-                          <SheetClose key={link.href} asChild>
-                            <Link
-                              href={link.href}
-                              className="text-base text-muted-foreground transition-colors hover:text-primary tracking-widest"
-                              prefetch={false}
-                            >
-                              {link.label}
-                            </Link>
-                          </SheetClose>
-                        ))}
-                      </div>
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
+              <div className="flex h-full flex-col justify-between">
+                <div className="flex flex-col space-y-2 text-center">
+                    <Accordion type="single" collapsible className="w-full">
+                    <AccordionItem value="services" className="border-b-0">
+                        <AccordionTrigger className="justify-center text-lg transition-colors hover:text-primary tracking-widest py-2 hover:no-underline">
+                        all services
+                        </AccordionTrigger>
+                        <AccordionContent>
+                        <div className="flex flex-col space-y-2 pl-4">
+                            {serviceLinks.map((link) => (
+                            <SheetClose key={link.href} asChild>
+                                <Link
+                                href={link.href}
+                                className="text-base text-muted-foreground transition-colors hover:text-primary tracking-widest"
+                                prefetch={false}
+                                >
+                                {link.label}
+                                </Link>
+                            </SheetClose>
+                            ))}
+                        </div>
+                        </AccordionContent>
+                    </AccordionItem>
+                    </Accordion>
 
-                {mainNavLinks.map((link, index) => (
-                   <SheetClose key={link.href} asChild>
+                    {mainNavLinks.map((link) => (
+                    <SheetClose key={link.href} asChild>
+                        <Link
+                            href={link.href}
+                            className="text-lg transition-colors hover:text-primary tracking-widest py-2"
+                            prefetch={false}
+                        >
+                            {link.label}
+                        </Link>
+                    </SheetClose>
+                    ))}
+                </div>
+                <div className="mt-8">
                     <Link
-                        href={link.href}
-                        className="text-lg transition-colors hover:text-primary tracking-widest py-2"
-                        prefetch={false}
+                        href="tel:0472526148"
+                        className={cn(buttonVariants({ variant: 'default', size: 'lg' }), "w-full")}
                     >
-                        {link.label}
+                        <Phone className="h-4 w-4" />
+                        0472 526 148
                     </Link>
-                   </SheetClose>
-                ))}
+                </div>
               </div>
             </SheetContent>
           </Sheet>
@@ -215,3 +226,5 @@ export function SiteHeader() {
     </header>
   );
 }
+
+    
