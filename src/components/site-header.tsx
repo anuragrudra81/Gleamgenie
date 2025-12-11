@@ -25,7 +25,7 @@ import { Menu, ChevronDown, Phone } from "lucide-react";
 import { useState, useEffect } from "react";
 import { GleamGenieLogo } from "./icons";
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 
 const serviceLinks = [
   { href: "/services/home-cleaning", label: "residential cleaning" },
@@ -64,14 +64,14 @@ export function SiteHeader() {
         <header
           className={'fixed top-0 z-50 w-full bg-transparent'}
         >
-        <div className="container flex h-16 items-center">
+        <div className="container flex h-24 items-center">
             <Link
             href="/"
             className="flex items-center space-x-2 mr-auto"
             prefetch={false}
             >
             <GleamGenieLogo
-                className="h-14 w-auto"
+                className="h-20 w-auto"
             />
             <span className="font-semibold text-xl tracking-wide sr-only">gleam genie</span>
             </Link>
@@ -100,14 +100,14 @@ export function SiteHeader() {
           : "bg-transparent"
       }`}
     >
-      <div className="container flex h-20 items-center">
+      <div className="container flex h-24 items-center">
         <Link
           href="/"
           className="flex items-center space-x-2 mr-auto"
           prefetch={false}
         >
           <GleamGenieLogo
-            className="h-16 w-auto"
+            className="h-20 w-auto"
           />
            <span className="font-semibold text-xl tracking-wide sr-only">gleam genie</span>
         </Link>
@@ -168,7 +168,7 @@ export function SiteHeader() {
             </SheetTrigger>
             <SheetContent side="right">
               <Link href="/" className="mr-6 flex items-center space-x-2 mb-8">
-                <GleamGenieLogo className="h-14 w-auto text-primary" />
+                <GleamGenieLogo className="h-20 w-auto text-primary" />
                 <span className="sr-only">Gleam Genie</span>
               </Link>
               <div className="flex h-full flex-col justify-between">
@@ -179,7 +179,7 @@ export function SiteHeader() {
                         all services
                         </AccordionTrigger>
                         <AccordionContent>
-                        <div className="flex flex-col space-y-4 pt-2">
+                        <div className="flex flex-col space-y-4 pt-2 text-center">
                             {serviceLinks.map((link) => (
                             <SheetClose key={link.href} asChild>
                                 <Link
