@@ -71,7 +71,7 @@ export function SiteHeader() {
             prefetch={false}
             >
             <GleamGenieLogo
-                className="h-20 w-auto"
+                className="h-[20rem] w-auto"
             />
             <span className="font-semibold text-xl tracking-wide sr-only">gleam genie</span>
             </Link>
@@ -107,7 +107,7 @@ export function SiteHeader() {
           prefetch={false}
         >
           <GleamGenieLogo
-            className="h-20 w-auto"
+            className="h-[20rem] w-auto"
           />
            <span className="font-semibold text-xl tracking-wide sr-only">gleam genie</span>
         </Link>
@@ -168,7 +168,7 @@ export function SiteHeader() {
             </SheetTrigger>
             <SheetContent side="right">
               <Link href="/" className="mr-6 flex items-center space-x-2 mb-8">
-                <GleamGenieLogo className="h-20 w-auto text-primary" />
+                <GleamGenieLogo className="h-[20rem] w-auto text-primary" />
                 <span className="sr-only">Gleam Genie</span>
               </Link>
               <div className="flex h-full flex-col justify-between">
