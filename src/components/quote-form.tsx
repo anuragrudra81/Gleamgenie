@@ -59,7 +59,26 @@ export function QuoteForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
+      serviceType: "",
+      residenceType: "",
+      bedrooms: "",
+      bathrooms: "",
+      stories: "",
+      package: "",
+      frequency: "",
+      lastCleaned: "",
       additionalServices: [],
+      furnished: "",
+      pets: "",
+      heardAbout: "",
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      streetAddress: "",
+      suburb: "",
+      state: "",
+      postcode: "",
     },
   });
 
