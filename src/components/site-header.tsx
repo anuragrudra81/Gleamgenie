@@ -3,7 +3,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
@@ -72,7 +71,7 @@ export function SiteHeader() {
             prefetch={false}
             >
             <GleamGenieLogo
-                className="h-12 w-auto"
+                className="h-14 w-auto"
             />
             <span className="font-semibold text-xl tracking-wide sr-only">gleam genie</span>
             </Link>
@@ -101,14 +100,14 @@ export function SiteHeader() {
           : "bg-transparent"
       }`}
     >
-      <div className="container flex h-16 items-center">
+      <div className="container flex h-20 items-center">
         <Link
           href="/"
           className="flex items-center space-x-2 mr-auto"
           prefetch={false}
         >
           <GleamGenieLogo
-            className="h-12 w-auto"
+            className="h-16 w-auto"
           />
            <span className="font-semibold text-xl tracking-wide sr-only">gleam genie</span>
         </Link>
@@ -148,7 +147,7 @@ export function SiteHeader() {
         <div className="hidden md:flex items-center justify-end space-x-2 ml-auto">
              <Link
                 href="tel:0472526148"
-                className={cn(buttonVariants({ variant: 'default', size: 'sm' }), "transform transition-all duration-300 hover:-translate-y-1")}
+                className={cn(buttonVariants({ variant: 'default', size: 'sm' }), "bg-primary text-primary-foreground hover:bg-primary/90 transform transition-all duration-300 hover:-translate-y-1")}
               >
                 <Phone className="h-4 w-4" />
                 0472 526 148
@@ -169,18 +168,18 @@ export function SiteHeader() {
             </SheetTrigger>
             <SheetContent side="right">
               <Link href="/" className="mr-6 flex items-center space-x-2 mb-8">
-                <GleamGenieLogo className="h-10 w-auto text-primary" />
+                <GleamGenieLogo className="h-14 w-auto text-primary" />
                 <span className="sr-only">Gleam Genie</span>
               </Link>
               <div className="flex h-full flex-col justify-between">
-                <div className="flex flex-col space-y-2 text-center">
+                <div className="flex flex-col space-y-4 text-center">
                     <Accordion type="single" collapsible className="w-full">
                     <AccordionItem value="services" className="border-b-0">
                         <AccordionTrigger className="justify-center text-lg transition-colors hover:text-primary tracking-widest py-2 hover:no-underline">
                         all services
                         </AccordionTrigger>
                         <AccordionContent>
-                        <div className="flex flex-col space-y-2 pl-4">
+                        <div className="flex flex-col space-y-4 pt-2">
                             {serviceLinks.map((link) => (
                             <SheetClose key={link.href} asChild>
                                 <Link
@@ -210,13 +209,15 @@ export function SiteHeader() {
                     ))}
                 </div>
                 <div className="mt-8">
-                    <Link
-                        href="tel:0472526148"
-                        className={cn(buttonVariants({ variant: 'default', size: 'lg' }), "w-full")}
-                    >
-                        <Phone className="h-4 w-4" />
-                        0472 526 148
-                    </Link>
+                    <SheetClose asChild>
+                        <Link
+                            href="tel:0472526148"
+                            className={cn(buttonVariants({ variant: 'default', size: 'lg' }), "w-full")}
+                        >
+                            <Phone className="h-4 w-4" />
+                            0472 526 148
+                        </Link>
+                    </SheetClose>
                 </div>
               </div>
             </SheetContent>
@@ -226,5 +227,3 @@ export function SiteHeader() {
     </header>
   );
 }
-
-    
