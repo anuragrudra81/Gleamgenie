@@ -71,7 +71,7 @@ export function SiteHeader() {
             prefetch={false}
             >
             <GleamGenieLogo
-                className="h-24 md:h-[10rem] w-auto"
+                className="h-[20rem] w-auto"
             />
             <span className="font-semibold text-xl tracking-wide sr-only">gleam genie</span>
             </Link>
@@ -107,7 +107,7 @@ export function SiteHeader() {
           prefetch={false}
         >
           <GleamGenieLogo
-            className="h-24 md:h-[10rem] w-auto"
+            className="h-[20rem] w-auto"
           />
            <span className="font-semibold text-xl tracking-wide sr-only">gleam genie</span>
         </Link>
