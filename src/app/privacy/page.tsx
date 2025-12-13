@@ -54,7 +54,7 @@ export default function PrivacyPage() {
             <h2 className="text-2xl font-bold mt-6 mb-3 text-primary">Your Rights</h2>
             <ul className="list-disc pl-6 space-y-2 font-light">
                 <li>You can ask us to see, update, or delete your personal information at any time</li>
-                <li>Contact us at: <a href="mailto:admin@gleamgenie.com.au" className="text-primary hover:underline">admin@gleamgenie.com.au</a></li>
+                <li>Contact us at: <a href="mailto:admin@gleamgenie.com.au" className="text-primary hover:underline font-bold">admin@gleamgenie.com.au</a></li>
             </ul>
           </div>
         </div>
