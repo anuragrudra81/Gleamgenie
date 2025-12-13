@@ -21,12 +21,12 @@ export function SiteFooter() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 w-full">
           <div className="flex items-center gap-4">
             <Link href="/" className="flex items-center gap-2" prefetch={false}>
-              <GleamGenieLogo className="h-[20rem] w-auto" />
+              <GleamGenieLogo className="h-48 md:h-64 w-auto" />
               <span className="font-semibold text-xl tracking-wide sr-only">gleam genie</span>
             </Link>
           </div>
           
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-sm w-full md:w-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-sm w-full md:w-auto">
               {contactDetails.map(detail => (
                   <div key={detail.label} className="text-center md:text-left">
                       <p className="font-semibold text-primary tracking-wide">{detail.label}</p>
