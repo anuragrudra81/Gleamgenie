@@ -169,7 +169,7 @@ export function SiteHeader() {
             <SheetContent side="right" className="flex flex-col">
               <div className="flex justify-center mt-8 mb-4">
                 <Link href="/" onClick={() => setSheetOpen(false)}>
-                    <GleamGenieLogo className="h-32 w-auto text-primary" />
+                    <GleamGenieLogo className="h-64 w-auto text-primary" />
                     <span className="sr-only">Gleam Genie</span>
                 </Link>
               </div>
