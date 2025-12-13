@@ -166,59 +166,63 @@ export function SiteHeader() {
                 <span className="sr-only">toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
-              <Link href="/" className="mr-6 flex items-center space-x-2 mb-8">
-                <GleamGenieLogo className="h-24 w-auto text-primary" />
-                <span className="sr-only">Gleam Genie</span>
-              </Link>
-              <div className="flex h-full flex-col justify-between">
-                <div className="flex flex-col space-y-4 text-center">
-                    <Accordion type="single" collapsible className="w-full">
-                    <AccordionItem value="services" className="border-b-0">
-                        <AccordionTrigger className="justify-center text-lg transition-colors hover:text-primary tracking-widest py-2 hover:no-underline">
-                        all services
-                        </AccordionTrigger>
-                        <AccordionContent>
-                        <div className="flex flex-col space-y-4 pt-2 text-center">
-                            {serviceLinks.map((link) => (
-                            <SheetClose key={link.href} asChild>
-                                <Link
-                                href={link.href}
-                                className="text-base text-muted-foreground transition-colors hover:text-primary tracking-widest"
-                                prefetch={false}
-                                >
-                                {link.label}
-                                </Link>
-                            </SheetClose>
-                            ))}
-                        </div>
-                        </AccordionContent>
-                    </AccordionItem>
-                    </Accordion>
+            <SheetContent side="right" className="flex flex-col">
+              <div className="flex justify-center mt-8 mb-4">
+                <Link href="/" onClick={() => setSheetOpen(false)}>
+                    <GleamGenieLogo className="h-32 w-auto text-primary" />
+                    <span className="sr-only">Gleam Genie</span>
+                </Link>
+              </div>
 
-                    {mainNavLinks.map((link) => (
-                    <SheetClose key={link.href} asChild>
-                        <Link
-                            href={link.href}
-                            className="text-lg transition-colors hover:text-primary tracking-widest py-2"
-                            prefetch={false}
-                        >
-                            {link.label}
-                        </Link>
-                    </SheetClose>
-                    ))}
-                </div>
-                <div className="mt-8">
-                    <SheetClose asChild>
-                        <Link
-                            href="tel:0472526148"
-                            className={cn(buttonVariants({ variant: 'default', size: 'lg' }), "w-full")}
-                        >
-                            <Phone className="h-4 w-4" />
-                            0472 526 148
-                        </Link>
-                    </SheetClose>
-                </div>
+              <div className="flex-grow flex flex-col justify-center">
+                  <div className="flex flex-col space-y-2 text-center">
+                      <Accordion type="single" collapsible className="w-full">
+                      <AccordionItem value="services" className="border-b-0">
+                          <AccordionTrigger className="justify-center text-lg transition-colors hover:text-primary tracking-widest py-3 hover:no-underline">
+                          all services
+                          </AccordionTrigger>
+                          <AccordionContent>
+                          <div className="flex flex-col space-y-3 pt-2 text-center">
+                              {serviceLinks.map((link) => (
+                              <SheetClose key={link.href} asChild>
+                                  <Link
+                                  href={link.href}
+                                  className="text-base text-muted-foreground transition-colors hover:text-primary tracking-widest"
+                                  prefetch={false}
+                                  >
+                                  {link.label}
+                                  </Link>
+                              </SheetClose>
+                              ))}
+                          </div>
+                          </AccordionContent>
+                      </AccordionItem>
+                      </Accordion>
+
+                      {mainNavLinks.map((link) => (
+                      <SheetClose key={link.href} asChild>
+                          <Link
+                              href={link.href}
+                              className="text-lg transition-colors hover:text-primary tracking-widest py-3"
+                              prefetch={false}
+                          >
+                              {link.label}
+                          </Link>
+                      </SheetClose>
+                      ))}
+                  </div>
+              </div>
+
+              <div className="mt-auto mb-8">
+                  <SheetClose asChild>
+                      <Link
+                          href="tel:0472526148"
+                          className={cn(buttonVariants({ variant: 'default', size: 'lg' }), "w-full")}
+                      >
+                          <Phone className="h-4 w-4" />
+                          0472 526 148
+                      </Link>
+                  </SheetClose>
               </div>
             </SheetContent>
           </Sheet>
