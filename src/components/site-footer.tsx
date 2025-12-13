@@ -21,7 +21,7 @@ export function SiteFooter() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 w-full">
           <div className="flex items-center gap-4">
             <Link href="/" className="flex items-center gap-2" prefetch={false}>
-              <GleamGenieLogo className="h-10 w-10 text-primary" />
+              <GleamGenieLogo className="h-[20rem] w-auto" />
               <span className="font-semibold text-xl tracking-wide sr-only">gleam genie</span>
             </Link>
           </div>
