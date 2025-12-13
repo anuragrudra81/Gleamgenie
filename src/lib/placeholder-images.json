@@ -2,8 +2,8 @@
   "placeholderImages": [
     {
       "id": "hero-image-1",
-      "description": "A modern, luxurious living room with beige walls, large windows, and bold blue furniture.",
-      "imageUrl": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb2Rlcm4lMjBsaXZpbmclMjByb29tfGVufDB8fHx8MTcyMjI3NzE1Mnww&ixlib=rb-4.0.3&q=80&w=1080",
+      "description": "A modern, luxurious living room with a large couch and a view of a lush garden.",
+      "imageUrl": "https://storage.googleapis.com/gweb-aip-images/tasks/studio/gleam-genie-hero-1.jpg",
       "imageHint": "modern living room"
     },
     {
