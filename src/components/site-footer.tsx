@@ -10,8 +10,8 @@ const contactDetails = [
 ];
 
 const socialLinks = [
-  { href: "https://instagram.com", label: "Instagram" },
-  { href: "https://facebook.com", label: "Facebook" },
+  { href: "https://www.instagram.com/gleamgenie.cs", label: "Instagram" },
+  { href: "https://www.facebook.com/gleam.genie/", label: "Facebook" },
 ];
 
 export function SiteFooter() {
