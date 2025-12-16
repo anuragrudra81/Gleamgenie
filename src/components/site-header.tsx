@@ -8,6 +8,7 @@ import {
   SheetContent,
   SheetTrigger,
   SheetClose,
+  SheetTitle,
 } from "@/components/ui/sheet";
 import {
   DropdownMenu,
@@ -168,6 +169,7 @@ export function SiteHeader() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="flex flex-col">
+              <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
               <div className="flex justify-center mt-8 mb-4">
                 <Link href="/" onClick={() => setSheetOpen(false)}>
                     <GleamGenieLogo className="h-64 w-auto text-primary" />
