@@ -77,6 +77,12 @@
       "description": "An empty, clean room with packed boxes to one side.",
       "imageUrl": "https://images.unsplash.com/photo-1577702312572-5bb9328a9f15?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb3ZpbmclMjBib3hlc3xlbnwwfHx8fDE3NjQ5NTQyMzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "moving boxes"
+    },
+    {
+      "id": "service-airbnb-cleaning",
+      "description": "A stylish and welcoming bedroom in an Airbnb rental, ready for guests.",
+      "imageUrl": "https://images.unsplash.com/photo-1560185893-a55d88p563f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhcmJibmIlMjBiZWRyb29tfGVufDB8fHx8MTc3MDc0MDU5OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "airbnb bedroom"
     }
   ]
 }

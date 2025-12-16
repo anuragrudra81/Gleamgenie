@@ -32,6 +32,7 @@ const serviceLinks = [
   { href: "/services/office-cleaning", label: "commercial cleaning" },
   { href: "/services/construction-cleaning", label: "construction cleaning" },
   { href: "/services/childcare-cleaning", label: "childcare cleaning" },
+  { href: "/services/airbnb-cleaning", label: "airbnb cleaning" },
 ];
 
 const mainNavLinks = [

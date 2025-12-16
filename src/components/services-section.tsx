@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Building2, Home, Construction, Baby } from "lucide-react";
+import { Building2, Home, Construction, Baby, BedDouble } from "lucide-react";
 import Link from "next/link";
 
 const services = [
@@ -28,6 +28,12 @@ const services = [
     description: "We provide specialized cleaning for childcare centers, ensuring a safe, hygienic, and welcoming environment for children and staff.",
     href: "/services/childcare-cleaning",
   },
+  {
+    icon: <BedDouble className="h-8 w-8 text-primary" />,
+    title: "airbnb cleaning",
+    description: "We offer tailored cleaning services for Airbnb hosts, ensuring your property is spotless and guest-ready between stays.",
+    href: "/services/airbnb-cleaning",
+  },
 ];
 
 export function ServicesSection() {
@@ -42,7 +48,7 @@ export function ServicesSection() {
             </p>
           </div>
         </div>
-        <div className="mx-auto grid items-start gap-8 pt-12 sm:max-w-4xl grid-cols-1 sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-4">
+        <div className="mx-auto grid items-start gap-8 pt-12 sm:max-w-4xl grid-cols-1 sm:grid-cols-2 md:gap-12 lg:max-w-7xl lg:grid-cols-5">
           {services.map((service, index) => (
             <Link href={service.href} key={service.title} className="group h-full">
               <Card 
