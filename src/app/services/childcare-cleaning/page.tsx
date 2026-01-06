@@ -19,7 +19,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 
 
-const serviceImage = PlaceHolderImages.find(p => p.id === 'service-office-cleaning');
+const serviceImage = PlaceHolderImages.find(p => p.id === 'service-childcare-cleaning');
 
 const officeQuoteFormSchema = z.object({
   name: z.string().min(1, 'Name is required'),
