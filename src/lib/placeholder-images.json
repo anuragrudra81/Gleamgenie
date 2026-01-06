@@ -3,7 +3,7 @@
     {
       "id": "hero-image-1",
       "description": "A modern, luxurious living room with a large couch and a view of a lush garden.",
-      "imageUrl": "https://storage.googleapis.com/gweb-aip-images/tasks/studio/gleam-genie-hero-1.jpg",
+      "imageUrl": "https://i.postimg.cc/RVT02H6y/Norah-hero.png",
       "imageHint": "modern living room"
     },
     {
@@ -56,9 +56,9 @@
     },
     {
       "id": "service-home-cleaning",
-      "description": "A bright, clean living room with sunlight streaming in.",
-      "imageUrl": "https://images.unsplash.com/photo-1597406462800-280ba190eb4c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjbGVhbiUyMGxpdmluZ3Jvb218ZW58MHx8fHwxNzY0OTM5OTA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "clean livingroom"
+      "description": "A person cleaning a modern home.",
+      "imageUrl": "https://i.postimg.cc/q7fxBnYs/Norah-house.png",
+      "imageHint": "house cleaning"
     },
     {
       "id": "service-office-cleaning",
