@@ -3,7 +3,7 @@
     {
       "id": "hero-image-1",
       "description": "A modern, luxurious living room with a large couch and a view of a lush garden.",
-      "imageUrl": "https://i.postimg.cc/RVT02H6y/Norah-hero.png",
+      "imageUrl": "https://storage.googleapis.com/gweb-aip-images/tasks/studio/gleam-genie-hero-1.jpg",
       "imageHint": "modern living room"
     },
     {
@@ -63,7 +63,7 @@
     {
       "id": "service-office-cleaning",
       "description": "A modern, clean open-plan office space.",
-      "imageUrl": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjbGVhbiUyMG9mZmljZXxlbnwwfHx8fDE3NjQ5OTU4MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.postimg.cc/d0MjQdXk/Norah-office.jpg",
       "imageHint": "clean office"
     },
     {
