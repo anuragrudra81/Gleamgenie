@@ -30,7 +30,7 @@ export function JourneySection() {
               I'm Norah, the founder of Gleam Genie. Originally from Milan, Italy, I moved to Melbourne with a passion for luxury and a love for creating beautiful, immaculate spaces. Inspired by the elegance I grew up around, I wanted to bring that same level of care and attention to detail to the homes here in Melbourne.
             </p>
             <p className="text-muted-foreground font-light max-w-lg">
-              Gleam Genie started as a vision to offer more than just cleaning—it's about creating an experience, transforming each home into a serene, luxurious sanctuary. Today, I'm proud to provide a service that delivers quality, elegance, and a touch of Italy in every home we clean.
+              Gleam Genie started as a vision to offer more than just cleaning, it's about creating an experience and transforming each home into a serene, luxurious sanctuary. Today, I'm proud to provide a service that delivers quality, elegance, and a touch of Italy in every home we clean.
             </p>
             <div className="pt-4">
               <Button asChild variant="outline" className="tracking-wide transform transition-transform duration-300 hover:-translate-y-1">
