@@ -5,7 +5,7 @@ import { GleamGenieLogo } from "./icons";
 const contactDetails = [
     { label: "Office Hour(s)", value: "Monday to Saturday (8AM to 5PM)" },
     { label: "Email", value: "admin@gleamgenie.com.au", href: "mailto:admin@gleamgenie.com.au" },
-    { label: "Phone", value: "+61 0472526148", href: "tel:+610472526148" },
+    { label: "Phone", value: "+61 472 526 148", href: "tel:+61472526148" },
     { label: "ABN", value: "41600925978" },
 ];
 
