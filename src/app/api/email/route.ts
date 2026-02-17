@@ -66,7 +66,7 @@ export async function POST(req: NextRequest) {
     if (quoteParsed.success) {
       const { data, error } = await resend.emails.send({
         from: 'Gleam Genie <onboarding@resend.dev>',
-        to: ['anuragrudra91@gmail.com'],
+        to: ['gleamgenie9@gmail.com'],
         subject: 'New Instant Quote Request from Gleam Genie',
         html: `
           <h1>New Instant Quote Request</h1>
@@ -87,7 +87,7 @@ export async function POST(req: NextRequest) {
     if (officeQuoteParsed.success) {
       const { data, error } = await resend.emails.send({
         from: 'Gleam Genie <onboarding@resend.dev>',
-        to: ['anuragrudra91@gmail.com'],
+        to: ['gleamgenie9@gmail.com'],
         subject: 'New Office Cleaning Quote Request from Gleam Genie',
         html: `
           <h1>New Office Cleaning Quote Request</h1>
@@ -110,7 +110,7 @@ export async function POST(req: NextRequest) {
       const { name, email, message } = contactParsed.data;
       const { data, error } = await resend.emails.send({
         from: 'Gleam Genie <onboarding@resend.dev>',
-        to: ['anuragrudra91@gmail.com'],
+        to: ['gleamgenie9@gmail.com'],
         subject: `New message from ${name} via Gleam Genie`,
         html: `
           <p>You have received a new message from your website contact form.</p>
