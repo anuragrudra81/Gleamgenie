@@ -20,13 +20,13 @@ import { useState } from "react";
 
 const formSchema = z.object({
   name: z.string().min(2, {
-    message: "name must be at least 2 characters.",
+    message: "name must be at least 2 characters",
   }),
   email: z.string().email({
-    message: "please enter a valid email address.",
+    message: "please enter a valid email address",
   }),
   message: z.string().min(10, {
-    message: "message must be at least 10 characters.",
+    message: "message must be at least 10 characters",
   }),
 });
 
@@ -54,19 +54,19 @@ export function ContactSection() {
       });
 
       if (!response.ok) {
-        throw new Error('Something went wrong.');
+        throw new Error('Something went wrong');
       }
 
       toast({
-        title: "message sent!",
-        description: "thanks for reaching out, we'll get back to you shortly.",
+        title: "message sent",
+        description: "thanks for reaching out, we will get back to you shortly",
       });
       form.reset();
     } catch (error) {
       toast({
         variant: "destructive",
-        title: "uh oh, something went wrong.",
-        description: "there was a problem sending your message, please try again.",
+        title: "uh oh, something went wrong",
+        description: "there was a problem sending your message, please try again",
       });
     } finally {
       setIsSubmitting(false);
@@ -80,7 +80,7 @@ export function ContactSection() {
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tight sm:text-5xl text-primary">get in touch</h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed font-light">
-              have a question or want to book a cleaning? send us a message!
+              have a question or want to book a cleaning? send us a message
             </p>
           </div>
         </div>
@@ -110,7 +110,7 @@ export function ContactSection() {
                         <FormItem>
                           <FormLabel className="font-light tracking-widest text-xs">email</FormLabel>
                           <FormControl>
-                            <Input placeholder="your@email.com" {...field} />
+                            <Input placeholder="gleamgenie9@gmail.com" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -125,7 +125,7 @@ export function ContactSection() {
                         <FormLabel className="font-light tracking-widest text-xs">message</FormLabel>
                         <FormControl>
                           <Textarea
-                            placeholder="Your message..."
+                            placeholder="Your message"
                             className="min-h-[120px]"
                             {...field}
                           />
@@ -135,7 +135,7 @@ export function ContactSection() {
                     )}
                   />
                   <Button type="submit" disabled={isSubmitting} className="w-full tracking-wide transform transition-transform duration-300 hover:-translate-y-1" size="lg">
-                    {isSubmitting ? 'sending...' : 'send message'}
+                    {isSubmitting ? 'sending' : 'send message'}
                   </Button>
                 </form>
               </Form>

@@ -51,19 +51,19 @@ function OfficeQuoteForm() {
             });
 
             if (!response.ok) {
-                throw new Error('Something went wrong.');
+                throw new Error('Something went wrong');
             }
 
             toast({
-                title: "Quote request sent!",
-                description: "Thanks! We'll get back to you with a quote shortly.",
+                title: "Quote request sent",
+                description: "Thanks, we will get back to you with a quote shortly",
             });
             form.reset();
         } catch (error) {
             toast({
                 variant: "destructive",
-                title: "Uh oh! Something went wrong.",
-                description: "There was a problem sending your request. Please try again.",
+                title: "uh oh, something went wrong",
+                description: "there was a problem sending your request, please try again",
             });
         } finally {
             setIsSubmitting(false);
@@ -83,7 +83,7 @@ function OfficeQuoteForm() {
                             render={({ field }) => (
                                 <FormItem>
                                 <FormControl>
-                                    <Input placeholder="Your Name:" {...field} className="bg-white text-foreground" />
+                                    <Input placeholder="Your Name" {...field} className="bg-white text-foreground" />
                                 </FormControl>
                                 <FormMessage />
                                 </FormItem>
@@ -95,7 +95,7 @@ function OfficeQuoteForm() {
                             render={({ field }) => (
                                 <FormItem>
                                 <FormControl>
-                                    <Input placeholder="Phone:" {...field} className="bg-white text-foreground" />
+                                    <Input placeholder="Phone" {...field} className="bg-white text-foreground" />
                                 </FormControl>
                                 <FormMessage />
                                 </FormItem>
@@ -107,7 +107,7 @@ function OfficeQuoteForm() {
                             render={({ field }) => (
                                 <FormItem>
                                 <FormControl>
-                                    <Input placeholder="Company:" {...field} className="bg-white text-foreground" />
+                                    <Input placeholder="Company" {...field} className="bg-white text-foreground" />
                                 </FormControl>
                                 <FormMessage />
                                 </FormItem>
@@ -119,7 +119,7 @@ function OfficeQuoteForm() {
                             render={({ field }) => (
                                 <FormItem>
                                 <FormControl>
-                                    <Input placeholder="Email:" {...field} className="bg-white text-foreground" />
+                                    <Input placeholder="Email" {...field} className="bg-white text-foreground" />
                                 </FormControl>
                                 <FormMessage />
                                 </FormItem>
@@ -127,7 +127,7 @@ function OfficeQuoteForm() {
                         />
                        <div className="md:col-span-2 flex justify-center">
                          <Button type="submit" disabled={isSubmitting} size="lg" className="bg-white/80 text-brand-navy hover:bg-white w-full max-w-xs">
-                           {isSubmitting ? "Sending..." : "Send Inquiry"}
+                           {isSubmitting ? "Sending" : "Send Inquiry"}
                          </Button>
                        </div>
                     </form>
@@ -157,7 +157,7 @@ export default function AirbnbCleaningPage() {
           <div className="flex flex-col justify-center space-y-6 animate-fade-in-up text-left">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-primary">Airbnb Cleaning</h1>
             <p className="text-muted-foreground font-light max-w-lg">
-              Impress your guests with a spotless and welcoming space. Our Airbnb cleaning service is designed to provide a consistently high-quality clean between stays, ensuring 5-star reviews every time. We handle everything from fresh linens to sparkling surfaces, so you can focus on being a superhost.
+              Impress your guests with a spotless and welcoming space, our airbnb cleaning service is designed to provide a consistently high quality clean between stays, ensuring 5 star reviews every time, we handle everything from fresh linens to sparkling surfaces, so you can focus on being a superhost.
             </p>
           </div>
         </div>
