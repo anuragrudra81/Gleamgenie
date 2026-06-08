@@ -1,3 +1,4 @@
+
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { z } from 'zod';
@@ -34,10 +35,10 @@ const quoteFormSchema = z.object({
 });
 
 const officeQuoteFormSchema = z.object({
-    name: z.string().min(1, 'Name is required'),
-    email: z.string().email('Invalid email address'),
-    phone: z.string().min(1, 'Phone is required'),
-    company: z.string().min(1, 'Company is required'),
+    name: z.string().min(1, 'name is required'),
+    email: z.string().email('invalid email address'),
+    phone: z.string().min(1, 'phone is required'),
+    company: z.string().min(1, 'company is required'),
 });
 
 function formatDataAsHtml(data: Record<string, any>) {
@@ -61,7 +62,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
 
     if (!process.env.RESEND_API_KEY) {
-      return NextResponse.json({ error: 'Mail server configuration missing.' }, { status: 500 });
+      return NextResponse.json({ error: 'mail server configuration missing' }, { status: 500 });
     }
 
     const recipient = 'gleamgenie9@gmail.com';
@@ -72,18 +73,18 @@ export async function POST(req: NextRequest) {
       const { error } = await resend.emails.send({
         from: 'Gleam Genie <onboarding@resend.dev>',
         to: [recipient],
-        subject: 'New Instant Quote Request from Gleam Genie',
+        subject: 'new instant quote request from gleam genie',
         html: `
-          <h1>New Instant Quote Request</h1>
+          <h1>new instant quote request</h1>
           ${formatDataAsHtml(quoteParsed.data)}
         `,
       });
 
       if (error) {
-        return NextResponse.json({ error: 'Failed to send quote request.' }, { status: 500 });
+        return NextResponse.json({ error: 'failed to send quote request' }, { status: 500 });
       }
 
-      return NextResponse.json({ message: 'Quote request sent successfully!' });
+      return NextResponse.json({ message: 'quote request sent successfully' });
     }
 
      // 2. Try parsing as an office quote form
@@ -92,18 +93,18 @@ export async function POST(req: NextRequest) {
       const { error } = await resend.emails.send({
         from: 'Gleam Genie <onboarding@resend.dev>',
         to: [recipient],
-        subject: 'New Office Cleaning Quote Request from Gleam Genie',
+        subject: 'new office cleaning quote request from gleam genie',
         html: `
-          <h1>New Office Cleaning Quote Request</h1>
+          <h1>new office cleaning quote request</h1>
           ${formatDataAsHtml(officeQuoteParsed.data)}
         `,
       });
 
       if (error) {
-        return NextResponse.json({ error: 'Failed to send office quote request.' }, { status: 500 });
+        return NextResponse.json({ error: 'failed to send office quote request' }, { status: 500 });
       }
 
-      return NextResponse.json({ message: 'Office quote request sent successfully!' });
+      return NextResponse.json({ message: 'office quote request sent successfully' });
     }
 
 
@@ -114,9 +115,9 @@ export async function POST(req: NextRequest) {
       const { error } = await resend.emails.send({
         from: 'Gleam Genie <onboarding@resend.dev>',
         to: [recipient],
-        subject: `New message from ${name} via Gleam Genie`,
+        subject: `new message from ${name} via gleam genie`,
         html: `
-          <p>You have received a new message from your website contact form.</p>
+          <p>you have received a new message from your website contact form</p>
           <p><strong>Name:</strong> ${name}</p>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Message:</strong></p>
@@ -125,15 +126,15 @@ export async function POST(req: NextRequest) {
       });
 
       if (error) {
-        return NextResponse.json({ error: 'Failed to send email.' }, { status: 500 });
+        return NextResponse.json({ error: 'failed to send email' }, { status: 500 });
       }
 
-      return NextResponse.json({ message: 'Email sent successfully!' });
+      return NextResponse.json({ message: 'email sent successfully' });
     }
 
-    return NextResponse.json({ error: 'Invalid input.' }, { status: 400 });
+    return NextResponse.json({ error: 'invalid input' }, { status: 400 });
 
   } catch (error) {
-    return NextResponse.json({ error: 'An unexpected error occurred.' }, { status: 500 });
+    return NextResponse.json({ error: 'an unexpected error occurred' }, { status: 500 });
   }
 }

@@ -1,3 +1,4 @@
+
 "use client";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -21,20 +22,20 @@ import { Check } from "lucide-react";
 const serviceImage = PlaceHolderImages.find(p => p.id === 'service-builder-cleaning');
 
 const officeQuoteFormSchema = z.object({
-  name: z.string().min(1, 'Name is required'),
-  email: z.string().email('Invalid email address'),
-  phone: z.string().min(1, 'Phone is required'),
-  company: z.string().min(1, 'Company is required'),
+  name: z.string().min(1, 'name is required'),
+  email: z.string().email('invalid email address'),
+  phone: z.string().min(1, 'phone is required'),
+  company: z.string().min(1, 'company is required'),
 });
 
 const constructionServices = [
-    "Pre build cleans",
-    "Final cleans",
-    "Refurbishment cleans",
-    "Maintenance cleans",
-    "Retail display installations",
-    "Retail fit outs",
-    "Demolition and strip outs",
+    "pre build cleans",
+    "final cleans",
+    "refurbishment cleans",
+    "maintenance cleans",
+    "retail display installations",
+    "retail fit outs",
+    "demolition and strip outs",
 ];
 
 function OfficeQuoteForm() {
@@ -62,19 +63,19 @@ function OfficeQuoteForm() {
             });
 
             if (!response.ok) {
-                throw new Error('Something went wrong.');
+                throw new Error('something went wrong');
             }
 
             toast({
-                title: "Quote request sent!",
-                description: "Thanks! We'll get back to you with a quote shortly.",
+                title: "quote request sent",
+                description: "thanks, we will get back to you with a quote shortly",
             });
             form.reset();
         } catch (error) {
             toast({
                 variant: "destructive",
-                title: "uh oh, something went wrong.",
-                description: "there was a problem sending your request, please try again.",
+                title: "uh oh, something went wrong",
+                description: "there was a problem sending your request, please try again",
             });
         } finally {
             setIsSubmitting(false);
@@ -94,7 +95,7 @@ function OfficeQuoteForm() {
                             render={({ field }) => (
                                 <FormItem>
                                 <FormControl>
-                                    <Input placeholder="Your Name:" {...field} className="bg-white text-foreground" />
+                                    <Input placeholder="your name" {...field} className="bg-white text-foreground" />
                                 </FormControl>
                                 <FormMessage />
                                 </FormItem>
@@ -106,7 +107,7 @@ function OfficeQuoteForm() {
                             render={({ field }) => (
                                 <FormItem>
                                 <FormControl>
-                                    <Input placeholder="Phone:" {...field} className="bg-white text-foreground" />
+                                    <Input placeholder="phone" {...field} className="bg-white text-foreground" />
                                 </FormControl>
                                 <FormMessage />
                                 </FormItem>
@@ -118,7 +119,7 @@ function OfficeQuoteForm() {
                             render={({ field }) => (
                                 <FormItem>
                                 <FormControl>
-                                    <Input placeholder="Company:" {...field} className="bg-white text-foreground" />
+                                    <Input placeholder="company" {...field} className="bg-white text-foreground" />
                                 </FormControl>
                                 <FormMessage />
                                 </FormItem>
@@ -130,7 +131,7 @@ function OfficeQuoteForm() {
                             render={({ field }) => (
                                 <FormItem>
                                 <FormControl>
-                                    <Input placeholder="Email:" {...field} className="bg-white text-foreground" />
+                                    <Input placeholder="email" {...field} className="bg-white text-foreground" />
                                 </FormControl>
                                 <FormMessage />
                                 </FormItem>
@@ -138,7 +139,7 @@ function OfficeQuoteForm() {
                         />
                        <div className="md:col-span-2 flex justify-center">
                          <Button type="submit" disabled={isSubmitting} size="lg" className="bg-white/80 text-brand-navy hover:bg-white w-full max-w-xs">
-                           {isSubmitting ? "Sending..." : "Send Inquiry"}
+                           {isSubmitting ? "sending" : "send inquiry"}
                          </Button>
                        </div>
                     </form>
@@ -165,13 +166,13 @@ export default function ConstructionCleaningPage() {
             )}
           </div>
           <div className="flex flex-col justify-center space-y-6 animate-fade-in-up text-left">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-primary">Construction Cleaning</h1>
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-primary">construction cleaning</h1>
             <div className="text-muted-foreground font-light max-w-lg space-y-4">
                 <p>
-                    All Gleam Genie workers are fully equipped with the required PPE and White Cards, and follow site specific SWMS to ensure safe, compliant refurbishment cleaning on construction sites.
+                    all gleam genie workers are fully equipped with the required ppe and white cards, and follow site specific swms to ensure safe, compliant refurbishment cleaning on construction sites
                 </p>
                 <div>
-                    <h3 className="font-semibold text-primary mb-2">Our Construction and Building Facility Services include:</h3>
+                    <h3 className="font-semibold text-primary mb-2">our construction and building facility services include:</h3>
                     <ul className="space-y-2">
                         {constructionServices.map((service) => (
                              <li key={service} className="flex items-start gap-3">

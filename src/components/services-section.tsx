@@ -7,31 +7,31 @@ const services = [
   {
     icon: <Home className="h-8 w-8 text-primary" />,
     title: "residential cleaning",
-    description: "We provide reliable home cleaning, thorough spring cleans, and detailed end of lease and vacate cleaning to make moving or refreshing your home simple and stress-free.",
+    description: "we provide reliable home cleaning, thorough spring cleans, and detailed end of lease and vacate cleaning to make moving or refreshing your home simple and stress free",
     href: "/services/home-cleaning",
   },
   {
     icon: <Building2 className="h-8 w-8 text-primary" />,
     title: "commercial cleaning",
-    description: "We deliver professional office cleaning to keep your workplace fresh, hygienic, and welcoming, creating a space where your team can be productive and clients feel confident.",
+    description: "we deliver professional office cleaning to keep your workplace fresh, hygienic, and welcoming, creating a space where your team can be productive and clients feel confident",
     href: "/services/office-cleaning",
   },
   {
     icon: <Construction className="h-8 w-8 text-primary" />,
     title: "construction cleaning",
-    description: "Our post-construction service delivers a thorough, top-to-bottom clean, transforming your new build into a pristine, move-in ready space.",
+    description: "our construction service delivers a thorough, top to bottom clean, transforming your new build into a pristine, move in ready space",
     href: "/services/construction-cleaning",
   },
    {
     icon: <Baby className="h-8 w-8 text-primary" />,
     title: "childcare cleaning",
-    description: "We provide specialized cleaning for childcare centers, ensuring a safe, hygienic, and welcoming environment for children and staff.",
+    description: "we provide specialized cleaning for childcare centers, ensuring a safe, hygienic, and welcoming environment for children and staff",
     href: "/services/childcare-cleaning",
   },
   {
     icon: <BedDouble className="h-8 w-8 text-primary" />,
     title: "airbnb cleaning",
-    description: "We offer tailored cleaning services for Airbnb hosts, ensuring your property is spotless and guest-ready between stays.",
+    description: "we offer tailored cleaning services for airbnb hosts, ensuring your property is spotless and guest ready between stays",
     href: "/services/airbnb-cleaning",
   },
 ];
@@ -44,7 +44,7 @@ export function ServicesSection() {
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tight sm:text-5xl text-primary">our cleaning services</h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed font-light">
-              we offer a range of services to meet your specific cleaning needs.
+              we offer a range of services to meet your specific cleaning needs
             </p>
           </div>
         </div>
