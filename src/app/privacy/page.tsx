@@ -1,8 +1,7 @@
-
 export default function PrivacyPage() {
   return (
     <div className="container mx-auto px-4 py-16 pt-32 sm:pt-48">
-      <h1 className="text-4xl font-bold mb-8 text-primary text-center">Privacy Policy – Gleam Genie</h1>
+      <h1 className="text-4xl font-bold mb-8 text-primary text-center">Privacy Policy, Gleam Genie</h1>
       <div className="prose prose-lg text-foreground max-w-4xl mx-auto">
         <p className="text-center">
           Gleam Genie (“we”, “our”) respects your privacy. Here’s how we handle your information:
@@ -54,7 +53,7 @@ export default function PrivacyPage() {
             <h2 className="text-2xl font-bold mt-6 mb-3 text-primary">Your Rights</h2>
             <ul className="list-disc pl-6 space-y-2 font-light">
                 <li>You can ask us to see, update, or delete your personal information at any time</li>
-                <li>Contact us at: <a href="mailto:admin@gleamgenie.com.au" className="text-primary hover:underline font-bold">admin@gleamgenie.com.au</a></li>
+                <li>Contact us at: <a href="mailto:gleamgenie9@gmail.com" className="text-primary hover:underline font-bold">gleamgenie9@gmail.com</a></li>
             </ul>
           </div>
         </div>
