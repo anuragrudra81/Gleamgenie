@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useForm } from "react-hook-form";
@@ -26,10 +25,10 @@ const formSchema = z.object({
   bedrooms: z.string().min(1, "Please select the number of bedrooms."),
   bathrooms: z.string().min(1, "Please select the number of bathrooms."),
   stories: z.string().min(1, "Please select the number of stories."),
-  package: z.string().min(1, "Please select a package."),
+  selectedPackage: z.string().min(1, "Please select a package."),
   frequency: z.string().min(1, "Please select a frequency."),
   lastCleaned: z.string().min(1, "Please select when it was last cleaned."),
-  additionalServices: z.array(z.string()).optional(),
+  additionalServices: z.array(z.string()).optional().default([]),
   furnished: z.string().min(1, "Please specify if the property is furnished."),
   pets: z.string().min(1, "Please specify if you have pets."),
   heardAbout: z.string().min(1, "Please let us know how you heard about us."),
@@ -48,7 +47,7 @@ const additionalServicesItems = [
   { id: "oven_clean", label: "Oven Clean" },
   { id: "window_clean", label: "Window Clean" },
   { id: "fridge_clean", label: "Fridge Clean" },
-  { id: "laundry", label: "Wash dry + fold laundry" },
+  { id: "laundry", label: "Wash dry, fold laundry" },
   { id: "balcony", label: "Balcony" },
   { id: "pantry", label: "Pantry" },
 ];
@@ -64,7 +63,7 @@ export function QuoteForm() {
       bedrooms: "",
       bathrooms: "",
       stories: "",
-      package: "",
+      selectedPackage: "",
       frequency: "",
       lastCleaned: "",
       additionalServices: [],
@@ -105,8 +104,8 @@ export function QuoteForm() {
     } catch (error) {
       toast({
         variant: "destructive",
-        title: "Uh oh! Something went wrong.",
-        description: "There was a problem sending your request. Please try again.",
+        title: "uh oh, something went wrong.",
+        description: "there was a problem sending your request, please try again.",
       });
     } finally {
       setIsSubmitting(false);
@@ -123,7 +122,7 @@ export function QuoteForm() {
           <FormControl>
             <RadioGroup
               onValueChange={field.onChange}
-              defaultValue={field.value}
+              value={field.value as string}
               className="flex flex-col space-y-1"
             >
               {options.map(option => (
@@ -158,13 +157,13 @@ export function QuoteForm() {
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {renderRadioGroup("serviceType", "Choose your service", ["General Cleaning", "Move-out / End-of-Lease Cleaning"])}
+                {renderRadioGroup("serviceType", "Choose your service", ["General Cleaning", "Move out, End of Lease Cleaning"])}
                 {renderRadioGroup("residenceType", "Type of Residence", ["Apartment", "House", "Townhouse", "Office"])}
                 {renderRadioGroup("bedrooms", "Number of Bedrooms", ["1", "2", "3", "4+"])}
                 {renderRadioGroup("bathrooms", "Number of Bathrooms", ["1", "2", "3", "4+"])}
                 {renderRadioGroup("stories", "Number of Stories", ["1", "2", "3", "4+"])}
-                {renderRadioGroup("package", "Select a Package", ["Basic Package", "Gold Package", "Platinum Package"])}
-                {renderRadioGroup("frequency", "How often would you like your home cleaned?", ["One-time", "Weekly", "Fortnightly", "Monthly"])}
+                {renderRadioGroup("selectedPackage", "Select a Package", ["Basic Package", "Gold Package", "Platinum Package"])}
+                {renderRadioGroup("frequency", "How often would you like your home cleaned?", ["One time", "Weekly", "Fortnightly", "Monthly"])}
                 {renderRadioGroup("lastCleaned", "When was the property last cleaned?", ["A month ago", "3 months ago", "6 months ago", "More than 6 months"])}
               </div>
               
@@ -183,6 +182,7 @@ export function QuoteForm() {
                           control={form.control}
                           name="additionalServices"
                           render={({ field }) => {
+                            const value = field.value || [];
                             return (
                               <FormItem
                                 key={item.id}
@@ -190,13 +190,13 @@ export function QuoteForm() {
                               >
                                 <FormControl>
                                   <Checkbox
-                                    checked={field.value?.includes(item.id)}
+                                    checked={value.includes(item.id)}
                                     onCheckedChange={(checked) => {
                                       return checked
-                                        ? field.onChange([...(field.value || []), item.id])
+                                        ? field.onChange([...value, item.id])
                                         : field.onChange(
-                                            field.value?.filter(
-                                              (value) => value !== item.id
+                                            value.filter(
+                                              (val) => val !== item.id
                                             )
                                           );
                                     }}

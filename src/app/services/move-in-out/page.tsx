@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -24,13 +23,13 @@ export default function MoveInOutCleaningPage() {
             )}
           </div>
           <div className="flex flex-col justify-center space-y-6 animate-fade-in-up text-left">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-primary">Move-In/Out Cleaning</h1>
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-primary">Move In, Out Cleaning</h1>
             <p className="text-muted-foreground font-light max-w-lg">
-              Moving is stressful enough without having to worry about cleaning. Our move-in/out cleaning service provides a deep clean for empty homes, ensuring a seamless transition for both renters and homeowners. Whether you're preparing a property for the next tenant or wanting to start fresh in your new home, we deliver a spotless space from top to bottom.
+              Moving is stressful enough without having to worry about cleaning. Our move in, out cleaning service provides a deep clean for empty homes, ensuring a seamless transition for both renters and homeowners. Whether you are preparing a property for the next tenant or wanting to start fresh in your new home, we deliver a spotless space from top to bottom.
             </p>
             <div className="pt-4">
               <Button asChild className="tracking-wide transform transition-transform duration-300 hover:-translate-y-1">
-                  <Link href="https://calendly.com/gleamgenie" target="_blank" rel="noopener noreferrer">Book a Move-Out Clean</Link>
+                  <Link href="https://calendly.com/gleamgenie" target="_blank" rel="noopener noreferrer">Book a Move Out Clean</Link>
               </Button>
             </div>
           </div>

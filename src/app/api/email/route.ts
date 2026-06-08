@@ -1,4 +1,3 @@
-
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { z } from 'zod';
@@ -6,9 +5,9 @@ import { z } from 'zod';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const contactFormSchema = z.object({
-  name: z.string(),
+  name: z.string().min(1),
   email: z.string().email(),
-  message: z.string(),
+  message: z.string().min(1),
 });
 
 const quoteFormSchema = z.object({
@@ -17,10 +16,10 @@ const quoteFormSchema = z.object({
   bedrooms: z.string(),
   bathrooms: z.string(),
   stories: z.string(),
-  package: z.string(),
+  selectedPackage: z.string(),
   frequency: z.string(),
   lastCleaned: z.string(),
-  additionalServices: z.array(z.string()),
+  additionalServices: z.array(z.string()).optional().default([]),
   furnished: z.string(),
   pets: z.string(),
   heardAbout: z.string(),
@@ -61,10 +60,10 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
 
-    // Try parsing as a quote form first
+    // 1. Try parsing as a quote form
     const quoteParsed = quoteFormSchema.safeParse(body);
     if (quoteParsed.success) {
-      const { data, error } = await resend.emails.send({
+      const { error } = await resend.emails.send({
         from: 'Gleam Genie <onboarding@resend.dev>',
         to: ['gleamgenie9@gmail.com'],
         subject: 'New Instant Quote Request from Gleam Genie',
@@ -75,17 +74,16 @@ export async function POST(req: NextRequest) {
       });
 
       if (error) {
-        console.error('Resend error (Quote):', error);
         return NextResponse.json({ error: 'Failed to send quote request.' }, { status: 500 });
       }
 
       return NextResponse.json({ message: 'Quote request sent successfully!' });
     }
 
-     // Try parsing as an office quote form
+     // 2. Try parsing as an office quote form
     const officeQuoteParsed = officeQuoteFormSchema.safeParse(body);
     if (officeQuoteParsed.success) {
-      const { data, error } = await resend.emails.send({
+      const { error } = await resend.emails.send({
         from: 'Gleam Genie <onboarding@resend.dev>',
         to: ['gleamgenie9@gmail.com'],
         subject: 'New Office Cleaning Quote Request from Gleam Genie',
@@ -96,7 +94,6 @@ export async function POST(req: NextRequest) {
       });
 
       if (error) {
-        console.error('Resend error (Office Quote):', error);
         return NextResponse.json({ error: 'Failed to send office quote request.' }, { status: 500 });
       }
 
@@ -104,11 +101,11 @@ export async function POST(req: NextRequest) {
     }
 
 
-    // Fallback to parsing as a contact form
+    // 3. Fallback to parsing as a contact form
     const contactParsed = contactFormSchema.safeParse(body);
     if (contactParsed.success) {
       const { name, email, message } = contactParsed.data;
-      const { data, error } = await resend.emails.send({
+      const { error } = await resend.emails.send({
         from: 'Gleam Genie <onboarding@resend.dev>',
         to: ['gleamgenie9@gmail.com'],
         subject: `New message from ${name} via Gleam Genie`,
@@ -122,7 +119,6 @@ export async function POST(req: NextRequest) {
       });
 
       if (error) {
-        console.error('Resend error (Contact):', error);
         return NextResponse.json({ error: 'Failed to send email.' }, { status: 500 });
       }
 
@@ -132,7 +128,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Invalid input.' }, { status: 400 });
 
   } catch (error) {
-    console.error('API route error:', error);
     return NextResponse.json({ error: 'An unexpected error occurred.' }, { status: 500 });
   }
 }

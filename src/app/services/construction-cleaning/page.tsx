@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -29,13 +28,13 @@ const officeQuoteFormSchema = z.object({
 });
 
 const constructionServices = [
-    "Pre-build cleans",
+    "Pre build cleans",
     "Final cleans",
     "Refurbishment cleans",
     "Maintenance cleans",
     "Retail display installations",
-    "Retail fit-outs",
-    "Demolition and strip-outs",
+    "Retail fit outs",
+    "Demolition and strip outs",
 ];
 
 function OfficeQuoteForm() {
@@ -74,8 +73,8 @@ function OfficeQuoteForm() {
         } catch (error) {
             toast({
                 variant: "destructive",
-                title: "Uh oh! Something went wrong.",
-                description: "There was a problem sending your request. Please try again.",
+                title: "uh oh, something went wrong.",
+                description: "there was a problem sending your request, please try again.",
             });
         } finally {
             setIsSubmitting(false);
@@ -169,10 +168,10 @@ export default function ConstructionCleaningPage() {
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-primary">Construction Cleaning</h1>
             <div className="text-muted-foreground font-light max-w-lg space-y-4">
                 <p>
-                    All Gleam Genie workers are fully equipped with the required PPE and White Cards, and follow site-specific SWMS to ensure safe, compliant refurbishment cleaning on construction sites.
+                    All Gleam Genie workers are fully equipped with the required PPE and White Cards, and follow site specific SWMS to ensure safe, compliant refurbishment cleaning on construction sites.
                 </p>
                 <div>
-                    <h3 className="font-semibold text-primary mb-2">Our Construction & Building Facility Services include:</h3>
+                    <h3 className="font-semibold text-primary mb-2">Our Construction and Building Facility Services include:</h3>
                     <ul className="space-y-2">
                         {constructionServices.map((service) => (
                              <li key={service} className="flex items-start gap-3">

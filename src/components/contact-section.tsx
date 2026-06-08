@@ -59,14 +59,14 @@ export function ContactSection() {
 
       toast({
         title: "message sent!",
-        description: "thanks for reaching out. we'll get back to you shortly.",
+        description: "thanks for reaching out, we'll get back to you shortly.",
       });
       form.reset();
     } catch (error) {
       toast({
         variant: "destructive",
-        title: "uh oh! something went wrong.",
-        description: "there was a problem sending your message. please try again.",
+        title: "uh oh, something went wrong.",
+        description: "there was a problem sending your message, please try again.",
       });
     } finally {
       setIsSubmitting(false);

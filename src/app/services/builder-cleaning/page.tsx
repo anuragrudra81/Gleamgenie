@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -26,7 +25,7 @@ export default function BuilderCleaningPage() {
           <div className="flex flex-col justify-center space-y-6 animate-fade-in-up text-left">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-primary">Builder Cleaning</h1>
             <p className="text-muted-foreground font-light max-w-lg">
-              Post-construction cleanup requires a special level of attention. Our builder cleaning service is designed to handle the dust, debris, and residue left behind after a renovation or new build. We provide a thorough, top-to-bottom clean that makes the property shine and ready for its new occupants. From detailed vacuuming to polishing surfaces, we ensure every corner is spotless.
+              Post construction cleanup requires a special level of attention. Our builder cleaning service is designed to handle the dust, debris, and residue left behind after a renovation or new build. We provide a thorough, top to bottom clean that makes the property shine and ready for its new occupants. From detailed vacuuming to polishing surfaces, we ensure every corner is spotless.
             </p>
             <div className="pt-4">
               <Button asChild className="tracking-wide transform transition-transform duration-300 hover:-translate-y-1">
